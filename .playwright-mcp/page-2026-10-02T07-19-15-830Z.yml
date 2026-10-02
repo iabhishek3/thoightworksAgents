@@ -1,0 +1,261 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "ThoughtWorks" [ref=e5] [cursor=pointer]:
+          - /url: "#"
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Architecture" [ref=e11] [cursor=pointer]:
+              - /url: "#architecture"
+          - listitem [ref=e12]:
+            - link "Platform" [ref=e13] [cursor=pointer]:
+              - /url: "#platform"
+          - listitem [ref=e14]:
+            - link "Agents" [ref=e15] [cursor=pointer]:
+              - /url: "#agents"
+          - listitem [ref=e16]:
+            - link "How It Works" [ref=e17] [cursor=pointer]:
+              - /url: "#how"
+        - link "Request Access" [ref=e18] [cursor=pointer]:
+          - /url: mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: Super Intelligent Agent Platform
+        - heading "AI agents that run your business operations." [level=1] [ref=e23]: AI agents thatrun your businessoperations.
+        - paragraph [ref=e24]: ThoughtWorks deploys autonomous, coordinated AI agents into your organization. They reason through complexity, integrate with your systems, and execute multi-step workflows — continuously.
+        - generic [ref=e25]:
+          - link "Request early access" [ref=e26] [cursor=pointer]:
+            - /url: mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request
+          - link "See how it works" [ref=e29] [cursor=pointer]:
+            - /url: "#how"
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - generic [ref=e32]: SOC 2
+            - generic [ref=e33]: Certified
+          - generic [ref=e35]:
+            - generic [ref=e36]: 50+
+            - generic [ref=e37]: Integrations
+          - generic [ref=e39]:
+            - generic [ref=e40]: 24/7
+            - generic [ref=e41]: Autonomous
+      - generic [ref=e43]:
+        - generic [ref=e44]: Agent Cluster — Live
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: Orchestrator
+            - generic [ref=e50]: coordinating
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - generic [ref=e57]: Research
+              - generic [ref=e58]: analyzing
+            - generic [ref=e59]:
+              - generic [ref=e60]: Revenue
+              - generic [ref=e61]: forecasting
+            - generic [ref=e62]:
+              - generic [ref=e63]: Ops
+              - generic [ref=e64]: optimizing
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - generic [ref=e67]: 12:04:31
+            - generic [ref=e68]: Research agent indexed 847 sources
+          - generic [ref=e69]:
+            - generic [ref=e70]: 12:04:33
+            - generic [ref=e71]: Revenue agent flagged 3 at-risk deals
+          - generic [ref=e72]:
+            - generic [ref=e73]: 12:04:34
+            - generic [ref=e74]: Orchestrator routing insights to Ops
+          - generic [ref=e75]:
+            - generic [ref=e76]: 12:04:36
+            - generic [ref=e77]: Ops agent generating action plan...
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: Architecture
+        - heading "Inside the agent harness." [level=2] [ref=e83]
+        - paragraph [ref=e84]: Every agent runs inside a managed harness — an isolated runtime with its own orchestration loop, tool connections, memory, and full observability. Here's what happens when a task arrives.
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - generic [ref=e87]: Observability & Audit Trail
+          - generic [ref=e91]:
+            - generic [ref=e92]: Isolated Runtime & Security
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - generic [ref=e100]: Task Input
+                - generic [ref=e101]: User request or trigger
+              - generic [ref=e105]:
+                - generic [ref=e110]: Orchestrator
+                - generic [ref=e111]: Reason → Plan → Act
+                - generic [ref=e112]: Loop
+              - generic [ref=e117]:
+                - generic [ref=e122]: LLM
+                - generic [ref=e123]: Reasoning & decisions
+              - generic [ref=e127]:
+                - generic [ref=e132]: Tool Execution
+                - generic [ref=e133]: APIs, code, browser
+              - generic [ref=e137]:
+                - generic [ref=e141]: Result
+                - generic [ref=e142]: Action or response
+            - generic [ref=e143]:
+              - generic [ref=e146]:
+                - generic [ref=e147]: Memory
+                - generic [ref=e148]: Short & long-term context
+              - generic [ref=e151]:
+                - generic [ref=e152]: Tool Gateway
+                - generic [ref=e153]: MCP, APIs, connectors
+              - generic [ref=e156]:
+                - generic [ref=e157]: Session State
+                - generic [ref=e158]: Filesystem, shell, context
+              - generic [ref=e161]:
+                - generic [ref=e162]: Guardrails
+                - generic [ref=e163]: Validation & safety checks
+        - generic [ref=e164]:
+          - generic [ref=e165]: Agent Trace — Live
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: 00:00.000
+              - generic [ref=e170]: INPUT
+              - generic [ref=e171]: "Task received: \"Analyze Q3 pipeline risks\""
+            - generic [ref=e172]:
+              - generic [ref=e173]: 00:00.012
+              - generic [ref=e174]: PLAN
+              - generic [ref=e175]: Decomposed into 3 sub-tasks
+            - generic [ref=e176]:
+              - generic [ref=e177]: 00:00.034
+              - generic [ref=e178]: LLM
+              - generic [ref=e179]: "Selected tools: CRM query, doc search"
+            - generic [ref=e180]:
+              - generic [ref=e181]: 00:00.089
+              - generic [ref=e182]: TOOL
+              - generic [ref=e183]: "CRM: fetched 142 open opportunities"
+            - generic [ref=e184]:
+              - generic [ref=e185]: 00:00.210
+              - generic [ref=e186]: TOOL
+              - generic [ref=e187]: "Docs: indexed 23 relevant reports"
+            - generic [ref=e188]:
+              - generic [ref=e189]: 00:00.340
+              - generic [ref=e190]: MEM
+              - generic [ref=e191]: Loaded prior Q2 analysis from long-term memory
+            - generic [ref=e192]:
+              - generic [ref=e193]: 00:00.412
+              - generic [ref=e194]: LOOP
+              - generic [ref=e195]: Re-entering orchestration with new context
+            - generic [ref=e196]:
+              - generic [ref=e197]: 00:00.567
+              - generic [ref=e198]: LLM
+              - generic [ref=e199]: Synthesizing findings, drafting risk report
+            - generic [ref=e200]:
+              - generic [ref=e201]: 00:00.891
+              - generic [ref=e202]: OUTPUT
+              - generic [ref=e203]: Report ready — 3 risks identified, actions attached
+    - generic [ref=e205]:
+      - generic [ref=e206]:
+        - paragraph [ref=e207]: Platform
+        - heading "Built for enterprise complexity." [level=2] [ref=e208]: Built for enterprisecomplexity.
+      - generic [ref=e209]:
+        - generic [ref=e210]:
+          - generic [ref=e211]: Multi-Agent Orchestration
+          - paragraph [ref=e212]: Agents don't operate in isolation. The platform coordinates specialist agents that share context, delegate sub-tasks, and converge on unified outcomes — much like a well-run team.
+          - generic [ref=e213]:
+            - generic [ref=e214]: Orchestrator
+            - generic [ref=e220]:
+              - generic [ref=e221]: Agent A
+              - generic [ref=e222]: Agent B
+              - generic [ref=e223]: Agent C
+        - generic [ref=e224]:
+          - generic [ref=e225]: Reasoning Engine
+          - paragraph [ref=e226]: Each agent decomposes objectives into sub-tasks, plans execution paths, and adapts when conditions change — not scripted automation, but genuine problem-solving.
+        - generic [ref=e227]:
+          - generic [ref=e228]: Observability
+          - paragraph [ref=e229]: Full audit trail of every decision and action. Human-in-the-loop controls when you need them. Nothing runs in a black box.
+        - generic [ref=e230]:
+          - generic [ref=e231]: 50+ Integrations
+          - paragraph [ref=e232]: CRMs, data warehouses, issue trackers, communication tools. Connect your existing stack through secure, pre-built connectors.
+        - generic [ref=e233]:
+          - generic [ref=e234]: Enterprise Security
+          - paragraph [ref=e235]: SOC 2 Type II. End-to-end encryption. Role-based access. Data residency controls. Your data never leaves your boundaries.
+        - generic [ref=e236]:
+          - generic [ref=e237]: Continuous Learning
+          - paragraph [ref=e238]: Agents improve from feedback and outcomes over time — refining their approach without retraining or manual tuning.
+    - generic [ref=e240]:
+      - generic [ref=e241]:
+        - paragraph [ref=e242]: Agent Fleet
+        - heading "A specialist for every function." [level=2] [ref=e243]: A specialist forevery function.
+        - paragraph [ref=e244]: Pre-built agents for common business functions, each configurable to your processes, data, and approval workflows.
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - generic [ref=e247]: Revenue Agent
+          - generic [ref=e248]: Sales
+          - generic [ref=e249]: Pipeline analysis, lead scoring, deal risk assessment, forecast generation.
+        - generic [ref=e250]:
+          - generic [ref=e251]: Research Agent
+          - generic [ref=e252]: Intelligence
+          - generic [ref=e253]: Market analysis, competitive monitoring, trend identification, report synthesis.
+        - generic [ref=e254]:
+          - generic [ref=e255]: Engineering Agent
+          - generic [ref=e256]: Development
+          - generic [ref=e257]: Code review, test generation, incident triage, deployment automation.
+        - generic [ref=e258]:
+          - generic [ref=e259]: Operations Agent
+          - generic [ref=e260]: Ops
+          - generic [ref=e261]: Workflow orchestration, bottleneck detection, resource allocation.
+        - generic [ref=e262]:
+          - generic [ref=e263]: Finance Agent
+          - generic [ref=e264]: Finance
+          - generic [ref=e265]: P&L monitoring, expense categorization, cash flow forecasting, anomaly detection.
+        - generic [ref=e266]:
+          - generic [ref=e267]: Support Agent
+          - generic [ref=e268]: Customer
+          - generic [ref=e269]: Ticket classification, response drafting, escalation routing.
+        - generic [ref=e270]:
+          - generic [ref=e271]: Compliance Agent
+          - generic [ref=e272]: Legal
+          - generic [ref=e273]: Contract review, risk flagging, regulatory monitoring, policy enforcement.
+        - generic [ref=e274]:
+          - generic [ref=e275]: Marketing Agent
+          - generic [ref=e276]: Growth
+          - generic [ref=e277]: Campaign analysis, content optimization, audience segmentation.
+    - generic [ref=e280]:
+      - generic [ref=e281]:
+        - paragraph [ref=e282]: Process
+        - heading "From setup to production in days, not months." [level=2] [ref=e283]: From setup toproduction in days,not months.
+        - paragraph [ref=e284]: Our engineering team works alongside yours to connect, configure, and deploy — with full support through launch and beyond.
+      - generic [ref=e285]:
+        - generic [ref=e286]:
+          - generic [ref=e287]: "01"
+          - generic [ref=e288]:
+            - generic [ref=e289]: Connect
+            - generic [ref=e290]: Integrate your tools and data sources through our secure connector library. No custom engineering work required.
+        - generic [ref=e291]:
+          - generic [ref=e292]: "02"
+          - generic [ref=e293]:
+            - generic [ref=e294]: Configure
+            - generic [ref=e295]: Define agent objectives in plain language. Map them to your specific workflows, approval chains, and business rules.
+        - generic [ref=e296]:
+          - generic [ref=e297]: "03"
+          - generic [ref=e298]:
+            - generic [ref=e299]: Deploy
+            - generic [ref=e300]: Agents go live with full observability. Every decision logged, every action auditable through the dashboard.
+        - generic [ref=e301]:
+          - generic [ref=e302]: "04"
+          - generic [ref=e303]:
+            - generic [ref=e304]: Scale
+            - generic [ref=e305]: Add agents, expand to new teams, refine behavior from real-world performance data. Marginal cost near zero.
+    - generic [ref=e308]:
+      - heading "Start building with super intelligent agents." [level=2] [ref=e309]: Start building withsuper intelligent agents.
+      - paragraph [ref=e310]: Reach out to learn more about the ThoughtWorks Super Intelligent Agent Platform. Our team will be in touch within one business day.
+      - link "Contact Us — info@thoughtworks.ai" [ref=e311] [cursor=pointer]:
+        - /url: mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request
+    - generic [ref=e315]:
+      - link "ThoughtWorks" [ref=e316] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e320]: © 2026 ThoughtWorks, Inc. All rights reserved.
+      - generic [ref=e321]:
+        - link "Privacy" [ref=e322] [cursor=pointer]:
+          - /url: "#"
+        - link "Terms" [ref=e323] [cursor=pointer]:
+          - /url: "#"
+        - link "Security" [ref=e324] [cursor=pointer]:
+          - /url: "#"
+        - link "Contact" [ref=e325] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e331] [cursor=pointer]

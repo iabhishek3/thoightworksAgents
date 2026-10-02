@@ -6,7 +6,7 @@ export default function Home() {
         <div className="nav-inner">
           <a href="#" className="nav-logo">
             <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-              <rect width="32" height="32" rx="7" fill="#e6007e" />
+              <rect width="32" height="32" rx="7" fill="#c8003c" />
               <path d="M7 10h6v2h-2v8h-2v-8H7v-2zm8 0h5l3 10h-2.5L18.8 14 17 20h-2.5l.5-10z" fill="white" />
             </svg>
             ThoughtWorks
@@ -23,43 +23,28 @@ export default function Home() {
 
       {/* Hero */}
       <section className="hero">
+        <div className="hero-glow" />
         <div className="hero-inner">
           <div className="hero-content">
             <p className="hero-eyebrow">Super Intelligent Agent Platform</p>
             <h1>
-              AI agents that
+              Autonomous AI agents
               <br />
-              run your business
+              for enterprise
               <br />
               operations.
             </h1>
             <p className="hero-body">
-              ThoughtWorks deploys autonomous, coordinated AI agents into your
-              organization. They reason through complexity, integrate with your
-              systems, and execute multi-step workflows — continuously.
+              ThoughtWorks deploys coordinated AI agents that reason through
+              complexity, integrate with your systems, and execute multi-step
+              workflows — continuously, reliably, at scale.
             </p>
             <div className="hero-actions">
               <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-primary">
                 Request early access
                 <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </a>
-              <a href="#how" className="btn-ghost">See how it works</a>
-            </div>
-            <div className="hero-proof">
-              <div className="proof-item">
-                <span className="proof-value">SOC 2</span>
-                <span className="proof-label">Certified</span>
-              </div>
-              <div className="proof-divider" />
-              <div className="proof-item">
-                <span className="proof-value">50+</span>
-                <span className="proof-label">Integrations</span>
-              </div>
-              <div className="proof-divider" />
-              <div className="proof-item">
-                <span className="proof-value">24/7</span>
-                <span className="proof-label">Autonomous</span>
-              </div>
+              <a href="#architecture" className="btn-ghost">Explore the architecture</a>
             </div>
           </div>
           <div className="hero-visual">
@@ -115,205 +100,107 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Trust bar */}
+        <div className="trust-bar">
+          <div className="trust-inner">
+            {["SOC 2 Type II", "End-to-end encryption", "50+ integrations", "24/7 autonomous", "Human-in-the-loop"].map((t, i) => (
+              <span key={i} className="trust-item">{t}</span>
+            ))}
+          </div>
+        </div>
       </section>
 
-      {/* ── Architecture: Agent Harness Flow ── */}
-      <section className="section section-alt" id="architecture">
+      {/* ── Architecture: full dark panel ── */}
+      <section className="arch-section" id="architecture">
         <div className="section-inner">
-          <div className="section-top" style={{ textAlign: 'center' }}>
-            <p className="eyebrow">Architecture</p>
-            <h2 className="heading-lg">
+          <div className="arch-header">
+            <p className="eyebrow-light">Architecture</p>
+            <h2 className="heading-lg-light">
               Inside the agent harness.
             </h2>
-            <p className="section-desc" style={{ margin: '0 auto' }}>
+            <p className="arch-desc">
               Every agent runs inside a managed harness — an isolated runtime
               with its own orchestration loop, tool connections, memory, and
-              full observability. Here&apos;s what happens when a task arrives.
+              full observability.
             </p>
           </div>
 
-          {/* Animated flow diagram */}
-          <div className="arch-flow">
-            {/* Observability wrapper layer */}
-            <div className="arch-layer arch-layer-obs">
-              <div className="arch-layer-label">
-                <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
-                Observability &amp; Audit Trail
-              </div>
-
-              {/* Security wrapper layer */}
-              <div className="arch-layer arch-layer-sec">
-                <div className="arch-layer-label">
-                  <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
-                  Isolated Runtime &amp; Security
-                </div>
-
-                {/* Core flow */}
-                <div className="arch-core">
-                  {/* Step 1: Input */}
-                  <div className="arch-node arch-node-input">
-                    <div className="arch-node-icon">
-                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" /></svg>
+          {/* Pipeline flow */}
+          <div className="arch-pipeline">
+            <div className="arch-pipe-label">Orchestration Loop</div>
+            <div className="arch-pipe-nodes">
+              {[
+                { title: "Task Input", sub: "Request or trigger", color: "var(--green)" },
+                { title: "Orchestrator", sub: "Reason \u2192 Plan \u2192 Act", color: "var(--accent)" },
+                { title: "LLM", sub: "Reasoning engine", color: "var(--purple)" },
+                { title: "Tool Execution", sub: "APIs, code, browser", color: "var(--amber)" },
+                { title: "Result", sub: "Action or response", color: "var(--blue)" },
+              ].map((n, i) => (
+                <div key={i} className="arch-pipe-step">
+                  {i > 0 && (
+                    <div className="arch-pipe-arrow">
+                      <div className="arch-pipe-arrow-line" />
+                      <div className="arch-pipe-arrow-dot" style={{ animationDelay: `${i * 0.4}s` }} />
                     </div>
-                    <div className="arch-node-title">Task Input</div>
-                    <div className="arch-node-sub">User request or trigger</div>
-                    <div className="arch-pulse" />
-                  </div>
-
-                  <div className="arch-arrow">
-                    <div className="arch-arrow-line" />
-                    <div className="arch-arrow-dot arch-dot-flow" />
-                  </div>
-
-                  {/* Step 2: Orchestrator */}
-                  <div className="arch-node arch-node-orch">
-                    <div className="arch-node-icon arch-icon-accent">
-                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
-                    </div>
-                    <div className="arch-node-title">Orchestrator</div>
-                    <div className="arch-node-sub">Reason &rarr; Plan &rarr; Act</div>
-                    <div className="arch-loop-badge">
-                      <div className="arch-loop-spinner" />
-                      Loop
-                    </div>
-                  </div>
-
-                  <div className="arch-arrow">
-                    <div className="arch-arrow-line" />
-                    <div className="arch-arrow-dot arch-dot-flow arch-dot-flow-d1" />
-                  </div>
-
-                  {/* Step 3: Model */}
-                  <div className="arch-node">
-                    <div className="arch-node-icon">
-                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
-                    </div>
-                    <div className="arch-node-title">LLM</div>
-                    <div className="arch-node-sub">Reasoning &amp; decisions</div>
-                  </div>
-
-                  <div className="arch-arrow">
-                    <div className="arch-arrow-line" />
-                    <div className="arch-arrow-dot arch-dot-flow arch-dot-flow-d2" />
-                  </div>
-
-                  {/* Step 4: Tool execution */}
-                  <div className="arch-node">
-                    <div className="arch-node-icon">
-                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
-                    </div>
-                    <div className="arch-node-title">Tool Execution</div>
-                    <div className="arch-node-sub">APIs, code, browser</div>
-                  </div>
-
-                  <div className="arch-arrow">
-                    <div className="arch-arrow-line" />
-                    <div className="arch-arrow-dot arch-dot-flow arch-dot-flow-d3" />
-                  </div>
-
-                  {/* Step 5: Output */}
-                  <div className="arch-node arch-node-output">
-                    <div className="arch-node-icon">
-                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
-                    </div>
-                    <div className="arch-node-title">Result</div>
-                    <div className="arch-node-sub">Action or response</div>
-                  </div>
-                </div>
-
-                {/* Bottom layer: supporting services */}
-                <div className="arch-services">
-                  <div className="arch-svc">
-                    <div className="arch-svc-dot arch-svc-dot-1" />
-                    <div className="arch-svc-info">
-                      <div className="arch-svc-name">Memory</div>
-                      <div className="arch-svc-detail">Short &amp; long-term context</div>
-                    </div>
-                  </div>
-                  <div className="arch-svc">
-                    <div className="arch-svc-dot arch-svc-dot-2" />
-                    <div className="arch-svc-info">
-                      <div className="arch-svc-name">Tool Gateway</div>
-                      <div className="arch-svc-detail">MCP, APIs, connectors</div>
-                    </div>
-                  </div>
-                  <div className="arch-svc">
-                    <div className="arch-svc-dot arch-svc-dot-3" />
-                    <div className="arch-svc-info">
-                      <div className="arch-svc-name">Session State</div>
-                      <div className="arch-svc-detail">Filesystem, shell, context</div>
-                    </div>
-                  </div>
-                  <div className="arch-svc">
-                    <div className="arch-svc-dot arch-svc-dot-4" />
-                    <div className="arch-svc-info">
-                      <div className="arch-svc-name">Guardrails</div>
-                      <div className="arch-svc-detail">Validation &amp; safety checks</div>
+                  )}
+                  <div className="arch-pipe-node">
+                    <div className="arch-pipe-indicator" style={{ background: n.color }} />
+                    <div>
+                      <div className="arch-pipe-title">{n.title}</div>
+                      <div className="arch-pipe-sub">{n.sub}</div>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
+          </div>
 
-            {/* Live activity feed */}
-            <div className="arch-feed">
-              <div className="arch-feed-header">
-                <div className="arch-feed-dot" />
-                Agent Trace — Live
+          {/* Infrastructure grid */}
+          <div className="arch-grid">
+            {[
+              { name: "Memory Layer", detail: "Short-term working memory and long-term recall across sessions. Context persists even when compute is recycled.", color: "var(--purple)" },
+              { name: "Tool Gateway", detail: "Secure connections to external systems via MCP servers, REST APIs, and pre-built connectors. Auth handled automatically.", color: "var(--amber)" },
+              { name: "Session Runtime", detail: "Isolated microVM per session with its own filesystem and shell. Agents can write and execute code safely.", color: "var(--green)" },
+              { name: "Guardrails", detail: "Input validation, output filtering, safety checks, and human-in-the-loop controls at every decision point.", color: "var(--blue)" },
+            ].map((s, i) => (
+              <div key={i} className="arch-infra-card">
+                <div className="arch-infra-dot" style={{ background: s.color }} />
+                <div className="arch-infra-name">{s.name}</div>
+                <div className="arch-infra-detail">{s.detail}</div>
               </div>
-              <div className="arch-feed-body">
-                <div className="arch-feed-line feed-anim-1">
-                  <span className="arch-feed-ts">00:00.000</span>
-                  <span className="arch-feed-tag tag-input">INPUT</span>
-                  <span>Task received: &quot;Analyze Q3 pipeline risks&quot;</span>
+            ))}
+          </div>
+
+          {/* Live trace */}
+          <div className="arch-trace">
+            <div className="arch-trace-header">
+              <div className="arch-trace-live" />
+              Agent Trace
+            </div>
+            <div className="arch-trace-body">
+              {[
+                { ts: "00:00.000", tag: "INPUT", tagClass: "t-green", msg: 'Task received: "Analyze Q3 pipeline risks"' },
+                { ts: "00:00.012", tag: "PLAN", tagClass: "t-accent", msg: "Decomposed into 3 sub-tasks" },
+                { ts: "00:00.034", tag: "LLM", tagClass: "t-purple", msg: "Selected tools: CRM query, doc search" },
+                { ts: "00:00.089", tag: "TOOL", tagClass: "t-amber", msg: "CRM: fetched 142 open opportunities" },
+                { ts: "00:00.210", tag: "TOOL", tagClass: "t-amber", msg: "Docs: indexed 23 relevant reports" },
+                { ts: "00:00.340", tag: "MEM", tagClass: "t-blue", msg: "Loaded prior Q2 analysis from long-term memory" },
+                { ts: "00:00.412", tag: "LOOP", tagClass: "t-accent", msg: "Re-entering orchestration with new context" },
+                { ts: "00:00.567", tag: "LLM", tagClass: "t-purple", msg: "Synthesizing findings, drafting risk report" },
+                { ts: "00:00.891", tag: "OUT", tagClass: "t-green", msg: "Report ready — 3 risks, actions attached" },
+              ].map((l, i) => (
+                <div key={i} className={`arch-trace-line feed-anim-${i + 1}`}>
+                  <span className="arch-trace-ts">{l.ts}</span>
+                  <span className={`arch-trace-tag ${l.tagClass}`}>{l.tag}</span>
+                  <span>{l.msg}</span>
                 </div>
-                <div className="arch-feed-line feed-anim-2">
-                  <span className="arch-feed-ts">00:00.012</span>
-                  <span className="arch-feed-tag tag-orch">PLAN</span>
-                  <span>Decomposed into 3 sub-tasks</span>
-                </div>
-                <div className="arch-feed-line feed-anim-3">
-                  <span className="arch-feed-ts">00:00.034</span>
-                  <span className="arch-feed-tag tag-llm">LLM</span>
-                  <span>Selected tools: CRM query, doc search</span>
-                </div>
-                <div className="arch-feed-line feed-anim-4">
-                  <span className="arch-feed-ts">00:00.089</span>
-                  <span className="arch-feed-tag tag-tool">TOOL</span>
-                  <span>CRM: fetched 142 open opportunities</span>
-                </div>
-                <div className="arch-feed-line feed-anim-5">
-                  <span className="arch-feed-ts">00:00.210</span>
-                  <span className="arch-feed-tag tag-tool">TOOL</span>
-                  <span>Docs: indexed 23 relevant reports</span>
-                </div>
-                <div className="arch-feed-line feed-anim-6">
-                  <span className="arch-feed-ts">00:00.340</span>
-                  <span className="arch-feed-tag tag-mem">MEM</span>
-                  <span>Loaded prior Q2 analysis from long-term memory</span>
-                </div>
-                <div className="arch-feed-line feed-anim-7">
-                  <span className="arch-feed-ts">00:00.412</span>
-                  <span className="arch-feed-tag tag-orch">LOOP</span>
-                  <span>Re-entering orchestration with new context</span>
-                </div>
-                <div className="arch-feed-line feed-anim-8">
-                  <span className="arch-feed-ts">00:00.567</span>
-                  <span className="arch-feed-tag tag-llm">LLM</span>
-                  <span>Synthesizing findings, drafting risk report</span>
-                </div>
-                <div className="arch-feed-line feed-anim-9">
-                  <span className="arch-feed-ts">00:00.891</span>
-                  <span className="arch-feed-tag tag-out">OUTPUT</span>
-                  <span>Report ready — 3 risks identified, actions attached</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Platform — bento grid */}
+      {/* Platform */}
       <section className="section" id="platform">
         <div className="section-inner">
           <div className="section-top">
@@ -325,69 +212,25 @@ export default function Home() {
             </h2>
           </div>
           <div className="bento">
-            <div className="bento-card bento-wide">
-              <div className="bento-label">Multi-Agent Orchestration</div>
-              <p className="bento-body">
-                Agents don&apos;t operate in isolation. The platform coordinates
-                specialist agents that share context, delegate sub-tasks, and
-                converge on unified outcomes — much like a well-run team.
-              </p>
-              <div className="bento-diagram">
-                <div className="bd-row">
-                  <div className="bd-box bd-box-accent">Orchestrator</div>
-                </div>
-                <div className="bd-connectors">
-                  <div className="bd-line" /><div className="bd-line" /><div className="bd-line" />
-                </div>
-                <div className="bd-row">
-                  <div className="bd-box">Agent A</div>
-                  <div className="bd-box">Agent B</div>
-                  <div className="bd-box">Agent C</div>
-                </div>
+            {[
+              { label: "Multi-Agent Orchestration", body: "The platform coordinates specialist agents that share context, delegate sub-tasks, and converge on unified outcomes — much like a well-run team.", wide: true },
+              { label: "Reasoning Engine", body: "Each agent decomposes objectives into sub-tasks, plans execution paths, and adapts when conditions change — genuine problem-solving, not scripts." },
+              { label: "Full Observability", body: "Audit trail of every decision and action. Human-in-the-loop controls when you need them. Nothing runs in a black box." },
+              { label: "50+ Integrations", body: "CRMs, data warehouses, issue trackers, communication tools. Connect your existing stack through secure, pre-built connectors." },
+              { label: "Enterprise Security", body: "SOC 2 Type II. End-to-end encryption. Role-based access. Data residency controls. Your data never leaves your boundaries." },
+              { label: "Continuous Learning", body: "Agents improve from feedback and outcomes over time — refining their approach without retraining or manual tuning." },
+            ].map((c, i) => (
+              <div key={i} className={`bento-card${c.wide ? " bento-wide" : ""}`}>
+                <div className="bento-label">{c.label}</div>
+                <p className="bento-body">{c.body}</p>
               </div>
-            </div>
-            <div className="bento-card">
-              <div className="bento-label">Reasoning Engine</div>
-              <p className="bento-body">
-                Each agent decomposes objectives into sub-tasks, plans execution
-                paths, and adapts when conditions change — not scripted
-                automation, but genuine problem-solving.
-              </p>
-            </div>
-            <div className="bento-card">
-              <div className="bento-label">Observability</div>
-              <p className="bento-body">
-                Full audit trail of every decision and action. Human-in-the-loop
-                controls when you need them. Nothing runs in a black box.
-              </p>
-            </div>
-            <div className="bento-card">
-              <div className="bento-label">50+ Integrations</div>
-              <p className="bento-body">
-                CRMs, data warehouses, issue trackers, communication tools.
-                Connect your existing stack through secure, pre-built connectors.
-              </p>
-            </div>
-            <div className="bento-card">
-              <div className="bento-label">Enterprise Security</div>
-              <p className="bento-body">
-                SOC 2 Type II. End-to-end encryption. Role-based access. Data
-                residency controls. Your data never leaves your boundaries.
-              </p>
-            </div>
-            <div className="bento-card">
-              <div className="bento-label">Continuous Learning</div>
-              <p className="bento-body">
-                Agents improve from feedback and outcomes over time — refining
-                their approach without retraining or manual tuning.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Agents */}
-      <section className="section section-alt" id="agents">
+      <section className="section section-warm" id="agents">
         <div className="section-inner">
           <div className="section-top">
             <p className="eyebrow">Agent Fleet</p>
@@ -401,7 +244,7 @@ export default function Home() {
               to your processes, data, and approval workflows.
             </p>
           </div>
-          <div className="agent-table">
+          <div className="agent-grid">
             {[
               { name: "Revenue Agent", domain: "Sales", desc: "Pipeline analysis, lead scoring, deal risk assessment, forecast generation." },
               { name: "Research Agent", domain: "Intelligence", desc: "Market analysis, competitive monitoring, trend identification, report synthesis." },
@@ -412,10 +255,10 @@ export default function Home() {
               { name: "Compliance Agent", domain: "Legal", desc: "Contract review, risk flagging, regulatory monitoring, policy enforcement." },
               { name: "Marketing Agent", domain: "Growth", desc: "Campaign analysis, content optimization, audience segmentation." },
             ].map((a, i) => (
-              <div key={i} className="agent-row">
-                <div className="agent-row-name">{a.name}</div>
-                <div className="agent-row-domain">{a.domain}</div>
-                <div className="agent-row-desc">{a.desc}</div>
+              <div key={i} className="agent-card">
+                <div className="agent-domain">{a.domain}</div>
+                <div className="agent-name">{a.name}</div>
+                <div className="agent-desc">{a.desc}</div>
               </div>
             ))}
           </div>
@@ -462,22 +305,20 @@ export default function Home() {
 
       {/* CTA */}
       <section className="cta-section" id="access">
-        <div className="section-inner">
-          <div className="cta-center">
-            <h2 className="heading-lg">
-              Start building with
-              <br />
-              super intelligent agents.
-            </h2>
-            <p className="section-desc" style={{ margin: '0 auto 32px' }}>
-              Reach out to learn more about the ThoughtWorks Super Intelligent
-              Agent Platform. Our team will be in touch within one business day.
-            </p>
-            <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-primary">
-              Contact Us — info@thoughtworks.ai
-              <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-            </a>
-          </div>
+        <div className="cta-inner">
+          <h2>
+            Start building with
+            <br />
+            super intelligent agents.
+          </h2>
+          <p>
+            Reach out to learn more about the ThoughtWorks Super Intelligent
+            Agent Platform. Our team responds within one business day.
+          </p>
+          <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-cta">
+            Contact Us — info@thoughtworks.ai
+            <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </a>
         </div>
       </section>
 
@@ -486,7 +327,7 @@ export default function Home() {
         <div className="footer-inner">
           <a href="#" className="nav-logo">
             <svg width="18" height="18" viewBox="0 0 32 32" fill="none">
-              <rect width="32" height="32" rx="7" fill="#e6007e" />
+              <rect width="32" height="32" rx="7" fill="#c8003c" />
               <path d="M7 10h6v2h-2v8h-2v-8H7v-2zm8 0h5l3 10h-2.5L18.8 14 17 20h-2.5l.5-10z" fill="white" />
             </svg>
             ThoughtWorks

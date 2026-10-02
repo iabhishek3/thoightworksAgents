@@ -24,82 +24,187 @@ export default function Home() {
       {/* Hero */}
       <section className="hero">
         <div className="hero-glow" />
-        <div className="hero-inner">
-          <div className="hero-content">
-            <p className="hero-eyebrow">Super Intelligent Agent Platform</p>
-            <h1>
-              Autonomous AI agents
-              <br />
-              for enterprise
-              <br />
-              operations.
-            </h1>
-            <p className="hero-body">
-              ThoughtWorks deploys coordinated AI agents that reason through
-              complexity, integrate with your systems, and execute multi-step
-              workflows — continuously, reliably, at scale.
-            </p>
-            <div className="hero-actions">
-              <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-primary">
-                Request early access
-                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-              </a>
-              <a href="#architecture" className="btn-ghost">Explore the architecture</a>
-            </div>
+        <div className="hero-top">
+          <p className="hero-eyebrow">Super Intelligent Agent Platform</p>
+          <h1>
+            Autonomous AI agents for
+            <br />
+            enterprise operations.
+          </h1>
+          <p className="hero-body">
+            ThoughtWorks deploys coordinated AI agents that reason through
+            complexity, integrate with your systems, and execute multi-step
+            workflows — continuously, reliably, at scale.
+          </p>
+          <div className="hero-actions">
+            <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-primary">
+              Request early access
+              <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
+            <a href="#architecture" className="btn-ghost">Explore the architecture</a>
           </div>
-          <div className="hero-visual">
-            <div className="agent-viz">
-              <div className="viz-header">
-                <div className="viz-dot viz-dot-active" />
-                <span>Agent Cluster — Live</span>
+        </div>
+
+        {/* ── Animated Dashboard Demo ── */}
+        <div className="demo-wrap">
+          <div className="demo">
+            {/* Title bar */}
+            <div className="demo-titlebar">
+              <div className="demo-dots">
+                <span className="demo-dot demo-dot-r" />
+                <span className="demo-dot demo-dot-y" />
+                <span className="demo-dot demo-dot-g" />
               </div>
-              <div className="viz-nodes">
-                <div className="viz-node viz-node-primary">
-                  <div className="viz-node-label">Orchestrator</div>
-                  <div className="viz-node-status">coordinating</div>
-                </div>
-                <div className="viz-connectors">
-                  <div className="viz-line" />
-                  <div className="viz-line" />
-                  <div className="viz-line" />
-                </div>
-                <div className="viz-row">
-                  <div className="viz-node">
-                    <div className="viz-node-label">Research</div>
-                    <div className="viz-node-status">analyzing</div>
+              <span className="demo-title">ThoughtWorks Agent Platform</span>
+              <div className="demo-live">
+                <span className="demo-live-dot" />
+                Live
+              </div>
+            </div>
+
+            <div className="demo-body">
+              {/* Left: Agent sidebar */}
+              <div className="demo-sidebar">
+                <div className="demo-sidebar-label">Agents</div>
+                {[
+                  { name: "Research", cls: "da-research" },
+                  { name: "Revenue", cls: "da-revenue" },
+                  { name: "Ops", cls: "da-ops" },
+                  { name: "Support", cls: "da-support" },
+                ].map((a, i) => (
+                  <div key={i} className={`demo-agent ${a.cls}`}>
+                    <div className="demo-agent-dot" />
+                    <div className="demo-agent-info">
+                      <div className="demo-agent-name">{a.name}</div>
+                      <div className="demo-agent-status">
+                        <span className="demo-status-idle">idle</span>
+                        <span className="demo-status-active">active</span>
+                        <span className="demo-status-done">done</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="viz-node">
-                    <div className="viz-node-label">Revenue</div>
-                    <div className="viz-node-status">forecasting</div>
+                ))}
+              </div>
+
+              {/* Center: Task panel */}
+              <div className="demo-main">
+                <div className="demo-task-header">
+                  <div className="demo-task-tag">Active Task</div>
+                  <div className="demo-task-title demo-type-in">Analyze Q3 pipeline and generate risk report</div>
+                </div>
+
+                <div className="demo-subtasks">
+                  <div className="demo-subtask ds-1">
+                    <div className="demo-check">
+                      <svg className="demo-check-empty" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" /></svg>
+                      <svg className="demo-check-done" width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="var(--green)" /><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" /></svg>
+                    </div>
+                    <span>Collect CRM data &amp; support tickets</span>
                   </div>
-                  <div className="viz-node">
-                    <div className="viz-node-label">Ops</div>
-                    <div className="viz-node-status">optimizing</div>
+                  <div className="demo-subtask ds-2">
+                    <div className="demo-check">
+                      <svg className="demo-check-empty" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" /></svg>
+                      <svg className="demo-check-done" width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="var(--green)" /><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" /></svg>
+                    </div>
+                    <span>Cross-reference with market analysis</span>
+                  </div>
+                  <div className="demo-subtask ds-3">
+                    <div className="demo-check">
+                      <svg className="demo-check-empty" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" /></svg>
+                      <svg className="demo-check-done" width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="var(--green)" /><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" /></svg>
+                    </div>
+                    <span>Score deal risks and rank pipeline</span>
+                  </div>
+                  <div className="demo-subtask ds-4">
+                    <div className="demo-check">
+                      <svg className="demo-check-empty" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" /></svg>
+                      <svg className="demo-check-done" width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="var(--green)" /><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" /></svg>
+                    </div>
+                    <span>Generate executive risk report</span>
+                  </div>
+                </div>
+
+                {/* Progress bar */}
+                <div className="demo-progress-wrap">
+                  <div className="demo-progress-labels">
+                    <span>Progress</span>
+                    <span className="demo-progress-pct" />
+                  </div>
+                  <div className="demo-progress-track">
+                    <div className="demo-progress-bar" />
+                  </div>
+                </div>
+
+                {/* Result card */}
+                <div className="demo-result">
+                  <div className="demo-result-icon">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="var(--green)" /><path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" /></svg>
+                  </div>
+                  <div>
+                    <div className="demo-result-title">Report Ready</div>
+                    <div className="demo-result-body">3 at-risk deals identified. Recovery actions drafted. Sent to stakeholders.</div>
                   </div>
                 </div>
               </div>
-              <div className="viz-log">
-                <div className="viz-log-line">
-                  <span className="viz-ts">12:04:31</span>
-                  <span className="viz-msg">Research agent indexed 847 sources</span>
+
+              {/* Right: Activity feed */}
+              <div className="demo-feed">
+                <div className="demo-feed-label">Activity</div>
+                <div className="demo-feed-items">
+                  <div className="demo-feed-item df-1">
+                    <span className="demo-feed-dot" style={{ background: 'var(--green)' }} />
+                    <span>Research scanning 847 data sources</span>
+                  </div>
+                  <div className="demo-feed-item df-2">
+                    <span className="demo-feed-dot" style={{ background: 'var(--blue)' }} />
+                    <span>Revenue pulling CRM pipeline data</span>
+                  </div>
+                  <div className="demo-feed-item df-3">
+                    <span className="demo-feed-dot" style={{ background: 'var(--green)' }} />
+                    <span>Research found 23 relevant reports</span>
+                  </div>
+                  <div className="demo-feed-item df-4">
+                    <span className="demo-feed-dot" style={{ background: 'var(--purple)' }} />
+                    <span>LLM cross-referencing findings</span>
+                  </div>
+                  <div className="demo-feed-item df-5">
+                    <span className="demo-feed-dot" style={{ background: 'var(--blue)' }} />
+                    <span>Revenue flagged 3 at-risk deals</span>
+                  </div>
+                  <div className="demo-feed-item df-6">
+                    <span className="demo-feed-dot" style={{ background: 'var(--amber)' }} />
+                    <span>Ops generating recovery actions</span>
+                  </div>
+                  <div className="demo-feed-item df-7">
+                    <span className="demo-feed-dot" style={{ background: 'var(--accent)' }} />
+                    <span>Orchestrator compiling final report</span>
+                  </div>
+                  <div className="demo-feed-item df-8">
+                    <span className="demo-feed-dot" style={{ background: 'var(--green)' }} />
+                    <span>Report delivered to stakeholders</span>
+                  </div>
                 </div>
-                <div className="viz-log-line">
-                  <span className="viz-ts">12:04:33</span>
-                  <span className="viz-msg">Revenue agent flagged 3 at-risk deals</span>
-                </div>
-                <div className="viz-log-line">
-                  <span className="viz-ts">12:04:34</span>
-                  <span className="viz-msg">Orchestrator routing insights to Ops</span>
-                </div>
-                <div className="viz-log-line viz-log-latest">
-                  <span className="viz-ts">12:04:36</span>
-                  <span className="viz-msg">Ops agent generating action plan...</span>
-                  <span className="viz-cursor" />
+
+                {/* Mini metrics */}
+                <div className="demo-metrics">
+                  <div className="demo-metric">
+                    <div className="demo-metric-val dm-tasks">0</div>
+                    <div className="demo-metric-lbl">sources</div>
+                  </div>
+                  <div className="demo-metric">
+                    <div className="demo-metric-val dm-agents">4</div>
+                    <div className="demo-metric-lbl">agents</div>
+                  </div>
+                  <div className="demo-metric">
+                    <div className="demo-metric-val dm-time">0s</div>
+                    <div className="demo-metric-lbl">elapsed</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         {/* Trust bar */}
         <div className="trust-bar">
           <div className="trust-inner">

@@ -1,153 +1,421 @@
 export default function Home() {
   return (
-    <main style={{ position: 'relative', zIndex: 1 }}>
-
-      {/* Background */}
-      <div className="bg-orbs">
-        <div className="orb orb1" />
-        <div className="orb orb2" />
-        <div className="orb orb3" />
-      </div>
-      <div className="grid-bg" />
-
-      {/* Navbar */}
-      <nav>
+    <main>
+      {/* Nav */}
+      <nav className="nav">
         <div className="nav-inner">
           <a href="#" className="nav-logo">
-            <div className="logo-icon">TW</div>
-            ThoughtWorks<span className="gradient-text">.ai</span>
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#e6007e" />
+              <path d="M7 10h6v2h-2v8h-2v-8H7v-2zm8 0h5l3 10h-2.5L18.8 14 17 20h-2.5l.5-10z" fill="white" />
+            </svg>
+            ThoughtWorks
           </a>
           <ul className="nav-links">
-            <li><a href="#features">Features</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#platform">Platform</a></li>
             <li><a href="#agents">Agents</a></li>
-            <li><a href="#how">How it works</a></li>
-            <li><a href="#stats">Results</a></li>
+            <li><a href="#how">How It Works</a></li>
           </ul>
-          <a href="#cta" className="btn-nav">Get Early Access</a>
+          <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-nav">Request Access</a>
         </div>
       </nav>
 
       {/* Hero */}
       <section className="hero">
-        <div className="badge">
-          <div className="pulse-dot" />
-          Super Intelligence AI Platform — Now in Beta
-        </div>
-        <h1 className="hero-title">
-          The World&apos;s First<br />
-          <span className="gradient-text">Super Intelligence</span><br />
-          Agent Platform
-        </h1>
-        <p className="hero-sub">
-          ThoughtWorks deploys autonomous AI agents that think, plan, and execute
-          across your entire business — 1000x faster than human teams, with superhuman accuracy.
-        </p>
-        <div className="hero-cta">
-          <a href="#cta" className="btn-big">Deploy Your First Agent →</a>
-          <a href="#how" className="btn-outline">See How It Works</a>
-        </div>
-        <div className="terminal-wrap">
-          <div className="terminal">
-            <div className="terminal-dots">
-              <div className="dot dot-red" />
-              <div className="dot dot-yellow" />
-              <div className="dot dot-green" />
-              <span className="terminal-tab">thoughtworks.ai — agent terminal</span>
+        <div className="hero-inner">
+          <div className="hero-content">
+            <p className="hero-eyebrow">Super Intelligent Agent Platform</p>
+            <h1>
+              AI agents that
+              <br />
+              run your business
+              <br />
+              operations.
+            </h1>
+            <p className="hero-body">
+              ThoughtWorks deploys autonomous, coordinated AI agents into your
+              organization. They reason through complexity, integrate with your
+              systems, and execute multi-step workflows — continuously.
+            </p>
+            <div className="hero-actions">
+              <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-primary">
+                Request early access
+                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </a>
+              <a href="#how" className="btn-ghost">See how it works</a>
             </div>
-            <div className="terminal-body">
-              <div className="t-dim"># Initializing ThoughtWorks Super Agent...</div>
-              <div><span className="t-green">✓</span> <span className="t-muted">Connecting to neural substrate</span> <span className="t-purple">[1.2ms]</span></div>
-              <div><span className="t-green">✓</span> <span className="t-muted">Loading 847B parameter model</span> <span className="t-purple">[0.3ms]</span></div>
-              <div><span className="t-green">✓</span> <span className="t-muted">Agent swarm initialized</span> <span className="t-blue">[128 agents ready]</span></div>
-              <div><span className="t-green">✓</span> <span className="t-muted">Business context ingested</span> <span className="t-cyan">[14,293 docs]</span></div>
-              <div className="t-prompt">
-                <span className="t-purple">agent@tw</span>
-                <span className="t-dim">~$</span>
-                <span>Analyze Q4 revenue drop and generate recovery plan<span className="cursor">|</span></span>
+            <div className="hero-proof">
+              <div className="proof-item">
+                <span className="proof-value">SOC 2</span>
+                <span className="proof-label">Certified</span>
               </div>
-              <div className="t-response">
-                <div className="t-response-title">🧠 Agent Response — 847ms</div>
-                <div className="t-response-body">Identified 3 root causes across 47 data sources. Generated 12-step recovery plan. Projected +34% revenue by Q1. Initiating automated execution across Sales, Marketing, and Product agents...</div>
+              <div className="proof-divider" />
+              <div className="proof-item">
+                <span className="proof-value">50+</span>
+                <span className="proof-label">Integrations</span>
+              </div>
+              <div className="proof-divider" />
+              <div className="proof-item">
+                <span className="proof-value">24/7</span>
+                <span className="proof-label">Autonomous</span>
               </div>
             </div>
           </div>
-          <div className="terminal-glow" />
-        </div>
-        <div className="scroll-hint">
-          <span>Scroll to explore</span>
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
+          <div className="hero-visual">
+            <div className="agent-viz">
+              <div className="viz-header">
+                <div className="viz-dot viz-dot-active" />
+                <span>Agent Cluster — Live</span>
+              </div>
+              <div className="viz-nodes">
+                <div className="viz-node viz-node-primary">
+                  <div className="viz-node-label">Orchestrator</div>
+                  <div className="viz-node-status">coordinating</div>
+                </div>
+                <div className="viz-connectors">
+                  <div className="viz-line" />
+                  <div className="viz-line" />
+                  <div className="viz-line" />
+                </div>
+                <div className="viz-row">
+                  <div className="viz-node">
+                    <div className="viz-node-label">Research</div>
+                    <div className="viz-node-status">analyzing</div>
+                  </div>
+                  <div className="viz-node">
+                    <div className="viz-node-label">Revenue</div>
+                    <div className="viz-node-status">forecasting</div>
+                  </div>
+                  <div className="viz-node">
+                    <div className="viz-node-label">Ops</div>
+                    <div className="viz-node-status">optimizing</div>
+                  </div>
+                </div>
+              </div>
+              <div className="viz-log">
+                <div className="viz-log-line">
+                  <span className="viz-ts">12:04:31</span>
+                  <span className="viz-msg">Research agent indexed 847 sources</span>
+                </div>
+                <div className="viz-log-line">
+                  <span className="viz-ts">12:04:33</span>
+                  <span className="viz-msg">Revenue agent flagged 3 at-risk deals</span>
+                </div>
+                <div className="viz-log-line">
+                  <span className="viz-ts">12:04:34</span>
+                  <span className="viz-msg">Orchestrator routing insights to Ops</span>
+                </div>
+                <div className="viz-log-line viz-log-latest">
+                  <span className="viz-ts">12:04:36</span>
+                  <span className="viz-msg">Ops agent generating action plan...</span>
+                  <span className="viz-cursor" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <div className="stats-section" id="stats">
-        <div className="stats-grid">
-          {[
-            { value: '1000x', label: 'Faster than human teams', color: '#a78bfa' },
-            { value: '99.9%', label: 'Task accuracy rate', color: '#60a5fa' },
-            { value: '128+', label: 'Parallel agents deployed', color: '#34d399' },
-            { value: '$2.4B', label: 'Value generated for clients', color: '#f472b6' },
-          ].map((s, i) => (
-            <div key={i} style={{ textAlign: 'center' }}>
-              <div className="stat-val" style={{ color: s.color }}>{s.value}</div>
-              <div className="stat-lbl">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Features */}
-      <section className="section" id="features">
+      {/* ── Architecture: Agent Harness Flow ── */}
+      <section className="section section-alt" id="architecture">
         <div className="section-inner">
-          <div className="section-header">
-            <div className="section-tag" style={{ color: '#a78bfa' }}>Capabilities</div>
-            <h2 className="section-title">Not just AI.<br /><span className="gradient-text">Super Intelligence.</span></h2>
-            <p className="section-sub">Our agents don&apos;t just answer questions — they autonomously run your business operations end-to-end.</p>
+          <div className="section-top" style={{ textAlign: 'center' }}>
+            <p className="eyebrow">Architecture</p>
+            <h2 className="heading-lg">
+              Inside the agent harness.
+            </h2>
+            <p className="section-desc" style={{ margin: '0 auto' }}>
+              Every agent runs inside a managed harness — an isolated runtime
+              with its own orchestration loop, tool connections, memory, and
+              full observability. Here&apos;s what happens when a task arrives.
+            </p>
           </div>
-          <div className="features-grid">
-            {[
-              { icon: '🧠', title: 'Autonomous Reasoning', desc: 'Agents that think 10 steps ahead, plan complex multi-stage tasks, and adapt in real-time to changing conditions.', color: '#7c3aed' },
-              { icon: '⚡', title: 'Parallel Execution', desc: 'Deploy swarms of 128+ specialized agents simultaneously — what takes teams weeks takes us minutes.', color: '#2563eb' },
-              { icon: '🔗', title: 'Deep Integrations', desc: 'Connects natively to 500+ tools — Salesforce, Slack, SAP, GitHub, and your custom systems via our universal API.', color: '#06b6d4' },
-              { icon: '🛡️', title: 'Enterprise Security', desc: 'SOC2 Type II certified. All data encrypted end-to-end. Your data never trains our models.', color: '#10b981' },
-              { icon: '📊', title: 'Predictive Intelligence', desc: 'Agents monitor your metrics, detect anomalies, and take corrective action before you even notice.', color: '#f59e0b' },
-              { icon: '🌐', title: 'Multi-Agent Coordination', desc: 'Agents communicate and collaborate — forming a self-organizing intelligence network across your org.', color: '#ec4899' },
-            ].map((f, i) => (
-              <div key={i} className="feature-card">
-                <div className="feature-icon" style={{ background: `${f.color}20`, border: `1px solid ${f.color}40` }}>{f.icon}</div>
-                <div className="feature-title">{f.title}</div>
-                <div className="feature-desc">{f.desc}</div>
+
+          {/* Animated flow diagram */}
+          <div className="arch-flow">
+            {/* Observability wrapper layer */}
+            <div className="arch-layer arch-layer-obs">
+              <div className="arch-layer-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                Observability &amp; Audit Trail
               </div>
-            ))}
+
+              {/* Security wrapper layer */}
+              <div className="arch-layer arch-layer-sec">
+                <div className="arch-layer-label">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                  Isolated Runtime &amp; Security
+                </div>
+
+                {/* Core flow */}
+                <div className="arch-core">
+                  {/* Step 1: Input */}
+                  <div className="arch-node arch-node-input">
+                    <div className="arch-node-icon">
+                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" /></svg>
+                    </div>
+                    <div className="arch-node-title">Task Input</div>
+                    <div className="arch-node-sub">User request or trigger</div>
+                    <div className="arch-pulse" />
+                  </div>
+
+                  <div className="arch-arrow">
+                    <div className="arch-arrow-line" />
+                    <div className="arch-arrow-dot arch-dot-flow" />
+                  </div>
+
+                  {/* Step 2: Orchestrator */}
+                  <div className="arch-node arch-node-orch">
+                    <div className="arch-node-icon arch-icon-accent">
+                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                    </div>
+                    <div className="arch-node-title">Orchestrator</div>
+                    <div className="arch-node-sub">Reason &rarr; Plan &rarr; Act</div>
+                    <div className="arch-loop-badge">
+                      <div className="arch-loop-spinner" />
+                      Loop
+                    </div>
+                  </div>
+
+                  <div className="arch-arrow">
+                    <div className="arch-arrow-line" />
+                    <div className="arch-arrow-dot arch-dot-flow arch-dot-flow-d1" />
+                  </div>
+
+                  {/* Step 3: Model */}
+                  <div className="arch-node">
+                    <div className="arch-node-icon">
+                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                    </div>
+                    <div className="arch-node-title">LLM</div>
+                    <div className="arch-node-sub">Reasoning &amp; decisions</div>
+                  </div>
+
+                  <div className="arch-arrow">
+                    <div className="arch-arrow-line" />
+                    <div className="arch-arrow-dot arch-dot-flow arch-dot-flow-d2" />
+                  </div>
+
+                  {/* Step 4: Tool execution */}
+                  <div className="arch-node">
+                    <div className="arch-node-icon">
+                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
+                    </div>
+                    <div className="arch-node-title">Tool Execution</div>
+                    <div className="arch-node-sub">APIs, code, browser</div>
+                  </div>
+
+                  <div className="arch-arrow">
+                    <div className="arch-arrow-line" />
+                    <div className="arch-arrow-dot arch-dot-flow arch-dot-flow-d3" />
+                  </div>
+
+                  {/* Step 5: Output */}
+                  <div className="arch-node arch-node-output">
+                    <div className="arch-node-icon">
+                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
+                    </div>
+                    <div className="arch-node-title">Result</div>
+                    <div className="arch-node-sub">Action or response</div>
+                  </div>
+                </div>
+
+                {/* Bottom layer: supporting services */}
+                <div className="arch-services">
+                  <div className="arch-svc">
+                    <div className="arch-svc-dot arch-svc-dot-1" />
+                    <div className="arch-svc-info">
+                      <div className="arch-svc-name">Memory</div>
+                      <div className="arch-svc-detail">Short &amp; long-term context</div>
+                    </div>
+                  </div>
+                  <div className="arch-svc">
+                    <div className="arch-svc-dot arch-svc-dot-2" />
+                    <div className="arch-svc-info">
+                      <div className="arch-svc-name">Tool Gateway</div>
+                      <div className="arch-svc-detail">MCP, APIs, connectors</div>
+                    </div>
+                  </div>
+                  <div className="arch-svc">
+                    <div className="arch-svc-dot arch-svc-dot-3" />
+                    <div className="arch-svc-info">
+                      <div className="arch-svc-name">Session State</div>
+                      <div className="arch-svc-detail">Filesystem, shell, context</div>
+                    </div>
+                  </div>
+                  <div className="arch-svc">
+                    <div className="arch-svc-dot arch-svc-dot-4" />
+                    <div className="arch-svc-info">
+                      <div className="arch-svc-name">Guardrails</div>
+                      <div className="arch-svc-detail">Validation &amp; safety checks</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Live activity feed */}
+            <div className="arch-feed">
+              <div className="arch-feed-header">
+                <div className="arch-feed-dot" />
+                Agent Trace — Live
+              </div>
+              <div className="arch-feed-body">
+                <div className="arch-feed-line feed-anim-1">
+                  <span className="arch-feed-ts">00:00.000</span>
+                  <span className="arch-feed-tag tag-input">INPUT</span>
+                  <span>Task received: &quot;Analyze Q3 pipeline risks&quot;</span>
+                </div>
+                <div className="arch-feed-line feed-anim-2">
+                  <span className="arch-feed-ts">00:00.012</span>
+                  <span className="arch-feed-tag tag-orch">PLAN</span>
+                  <span>Decomposed into 3 sub-tasks</span>
+                </div>
+                <div className="arch-feed-line feed-anim-3">
+                  <span className="arch-feed-ts">00:00.034</span>
+                  <span className="arch-feed-tag tag-llm">LLM</span>
+                  <span>Selected tools: CRM query, doc search</span>
+                </div>
+                <div className="arch-feed-line feed-anim-4">
+                  <span className="arch-feed-ts">00:00.089</span>
+                  <span className="arch-feed-tag tag-tool">TOOL</span>
+                  <span>CRM: fetched 142 open opportunities</span>
+                </div>
+                <div className="arch-feed-line feed-anim-5">
+                  <span className="arch-feed-ts">00:00.210</span>
+                  <span className="arch-feed-tag tag-tool">TOOL</span>
+                  <span>Docs: indexed 23 relevant reports</span>
+                </div>
+                <div className="arch-feed-line feed-anim-6">
+                  <span className="arch-feed-ts">00:00.340</span>
+                  <span className="arch-feed-tag tag-mem">MEM</span>
+                  <span>Loaded prior Q2 analysis from long-term memory</span>
+                </div>
+                <div className="arch-feed-line feed-anim-7">
+                  <span className="arch-feed-ts">00:00.412</span>
+                  <span className="arch-feed-tag tag-orch">LOOP</span>
+                  <span>Re-entering orchestration with new context</span>
+                </div>
+                <div className="arch-feed-line feed-anim-8">
+                  <span className="arch-feed-ts">00:00.567</span>
+                  <span className="arch-feed-tag tag-llm">LLM</span>
+                  <span>Synthesizing findings, drafting risk report</span>
+                </div>
+                <div className="arch-feed-line feed-anim-9">
+                  <span className="arch-feed-ts">00:00.891</span>
+                  <span className="arch-feed-tag tag-out">OUTPUT</span>
+                  <span>Report ready — 3 risks identified, actions attached</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform — bento grid */}
+      <section className="section" id="platform">
+        <div className="section-inner">
+          <div className="section-top">
+            <p className="eyebrow">Platform</p>
+            <h2 className="heading-lg">
+              Built for enterprise
+              <br />
+              complexity.
+            </h2>
+          </div>
+          <div className="bento">
+            <div className="bento-card bento-wide">
+              <div className="bento-label">Multi-Agent Orchestration</div>
+              <p className="bento-body">
+                Agents don&apos;t operate in isolation. The platform coordinates
+                specialist agents that share context, delegate sub-tasks, and
+                converge on unified outcomes — much like a well-run team.
+              </p>
+              <div className="bento-diagram">
+                <div className="bd-row">
+                  <div className="bd-box bd-box-accent">Orchestrator</div>
+                </div>
+                <div className="bd-connectors">
+                  <div className="bd-line" /><div className="bd-line" /><div className="bd-line" />
+                </div>
+                <div className="bd-row">
+                  <div className="bd-box">Agent A</div>
+                  <div className="bd-box">Agent B</div>
+                  <div className="bd-box">Agent C</div>
+                </div>
+              </div>
+            </div>
+            <div className="bento-card">
+              <div className="bento-label">Reasoning Engine</div>
+              <p className="bento-body">
+                Each agent decomposes objectives into sub-tasks, plans execution
+                paths, and adapts when conditions change — not scripted
+                automation, but genuine problem-solving.
+              </p>
+            </div>
+            <div className="bento-card">
+              <div className="bento-label">Observability</div>
+              <p className="bento-body">
+                Full audit trail of every decision and action. Human-in-the-loop
+                controls when you need them. Nothing runs in a black box.
+              </p>
+            </div>
+            <div className="bento-card">
+              <div className="bento-label">50+ Integrations</div>
+              <p className="bento-body">
+                CRMs, data warehouses, issue trackers, communication tools.
+                Connect your existing stack through secure, pre-built connectors.
+              </p>
+            </div>
+            <div className="bento-card">
+              <div className="bento-label">Enterprise Security</div>
+              <p className="bento-body">
+                SOC 2 Type II. End-to-end encryption. Role-based access. Data
+                residency controls. Your data never leaves your boundaries.
+              </p>
+            </div>
+            <div className="bento-card">
+              <div className="bento-label">Continuous Learning</div>
+              <p className="bento-body">
+                Agents improve from feedback and outcomes over time — refining
+                their approach without retraining or manual tuning.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Agents */}
-      <section className="section" id="agents" style={{ paddingTop: 0 }}>
+      <section className="section section-alt" id="agents">
         <div className="section-inner">
-          <div className="section-header">
-            <div className="section-tag" style={{ color: '#60a5fa' }}>Agent Fleet</div>
-            <h2 className="section-title">A specialist agent<br /><span className="gradient-text-pink">for every mission.</span></h2>
+          <div className="section-top">
+            <p className="eyebrow">Agent Fleet</p>
+            <h2 className="heading-lg">
+              A specialist for
+              <br />
+              every function.
+            </h2>
+            <p className="section-desc">
+              Pre-built agents for common business functions, each configurable
+              to your processes, data, and approval workflows.
+            </p>
           </div>
-          <div className="agents-grid">
+          <div className="agent-table">
             {[
-              { name: 'Sales Agent', role: 'Closes deals, nurtures leads, forecasts pipeline', emoji: '💼', tag: 'Revenue' },
-              { name: 'Research Agent', role: 'Deep market analysis, competitive intel, trend detection', emoji: '🔬', tag: 'Intelligence' },
-              { name: 'Code Agent', role: 'Writes, reviews, deploys production-ready code 24/7', emoji: '💻', tag: 'Engineering' },
-              { name: 'Finance Agent', role: 'Real-time P&L, cash flow optimization, risk analysis', emoji: '📈', tag: 'Finance' },
-              { name: 'Support Agent', role: 'Resolves 98% of tickets instantly, escalates edge cases', emoji: '🎯', tag: 'CX' },
-              { name: 'Marketing Agent', role: 'Creates campaigns, A/B tests, optimizes spend autonomously', emoji: '🚀', tag: 'Growth' },
-              { name: 'Legal Agent', role: 'Reviews contracts, flags risks, ensures compliance', emoji: '⚖️', tag: 'Legal' },
-              { name: 'Ops Agent', role: 'Orchestrates workflows, eliminates bottlenecks, scales ops', emoji: '⚙️', tag: 'Operations' },
+              { name: "Revenue Agent", domain: "Sales", desc: "Pipeline analysis, lead scoring, deal risk assessment, forecast generation." },
+              { name: "Research Agent", domain: "Intelligence", desc: "Market analysis, competitive monitoring, trend identification, report synthesis." },
+              { name: "Engineering Agent", domain: "Development", desc: "Code review, test generation, incident triage, deployment automation." },
+              { name: "Operations Agent", domain: "Ops", desc: "Workflow orchestration, bottleneck detection, resource allocation." },
+              { name: "Finance Agent", domain: "Finance", desc: "P&L monitoring, expense categorization, cash flow forecasting, anomaly detection." },
+              { name: "Support Agent", domain: "Customer", desc: "Ticket classification, response drafting, escalation routing." },
+              { name: "Compliance Agent", domain: "Legal", desc: "Contract review, risk flagging, regulatory monitoring, policy enforcement." },
+              { name: "Marketing Agent", domain: "Growth", desc: "Campaign analysis, content optimization, audience segmentation." },
             ].map((a, i) => (
-              <div key={i} className="agent-card">
-                <div className="agent-emoji">{a.emoji}</div>
-                <div className="agent-tag">{a.tag}</div>
-                <div className="agent-name">{a.name}</div>
-                <div className="agent-role">{a.role}</div>
+              <div key={i} className="agent-row">
+                <div className="agent-row-name">{a.name}</div>
+                <div className="agent-row-domain">{a.domain}</div>
+                <div className="agent-row-desc">{a.desc}</div>
               </div>
             ))}
           </div>
@@ -155,95 +423,83 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="section" id="how" style={{ paddingTop: 0 }}>
-        <div className="section-header">
-          <div className="section-tag" style={{ color: '#67e8f9' }}>Process</div>
-          <h2 className="section-title">Live in <span className="gradient-text">48 hours.</span></h2>
-          <p className="section-sub">No months of implementation. No army of consultants. Your agents go live in 48 hours.</p>
-        </div>
-        <div className="steps">
-          {[
-            { n: '01', title: 'Connect Your Business', desc: 'Link your existing tools and data sources. Our universal connector handles the rest — no engineering required.', time: 'Day 1 — 2 hours', color: '#7c3aed' },
-            { n: '02', title: 'Define Your Missions', desc: 'Tell agents in plain English what you need done. Our AI understands context and business nuance automatically.', time: 'Day 1 — 1 hour', color: '#2563eb' },
-            { n: '03', title: 'Deploy & Monitor', desc: 'Agents go live and start executing. Real-time dashboard shows every action taken and result achieved.', time: 'Day 2 — Live', color: '#06b6d4' },
-            { n: '04', title: 'Scale Infinitely', desc: 'Add more agents, expand to new departments, handle 10x the workload. Zero marginal cost to scale.', time: 'Ongoing', color: '#10b981' },
-          ].map((s, i) => (
-            <div key={i} className="step">
-              <div className="step-num" style={{ color: s.color }}>{s.n}</div>
-              <div className="step-body">
-                <div className="step-header">
-                  <span className="step-title">{s.title}</span>
-                  <span className="step-time">{s.time}</span>
-                </div>
-                <div className="step-desc">{s.desc}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section" id="how">
         <div className="section-inner">
-          <div className="section-header">
-            <h2 className="section-title">Trusted by industry leaders</h2>
-            <p className="section-sub">What our early access customers are saying</p>
-          </div>
-          <div className="testi-grid">
-            {[
-              { quote: "ThoughtWorks agents replaced 3 full analyst teams. We're getting better insights in milliseconds than we used to get in weeks.", name: 'Sarah Chen', role: 'CTO, NovaTech Inc.', initials: 'SC', color: '#7c3aed' },
-              { quote: "We deployed the Sales Agent on a Friday. By Monday it had already closed 2 enterprise deals we didn't even know were in the pipeline.", name: 'Marcus Williams', role: 'VP Sales, FutureScale', initials: 'MW', color: '#2563eb' },
-              { quote: "The ROI in the first month was 47x. I thought that was a typo. It wasn't. These agents are operating at a level we didn't think was possible yet.", name: 'Priya Sharma', role: 'CEO, Quantum Ventures', initials: 'PS', color: '#06b6d4' },
-            ].map((t, i) => (
-              <div key={i} className="testi-card">
-                <div className="quote-mark">&ldquo;</div>
-                <div className="quote-text">{t.quote}</div>
-                <div className="author">
-                  <div className="author-avatar" style={{ background: `${t.color}33`, color: t.color }}>{t.initials}</div>
+          <div className="how-layout">
+            <div className="how-left">
+              <p className="eyebrow">Process</p>
+              <h2 className="heading-lg">
+                From setup to
+                <br />
+                production in days,
+                <br />
+                not months.
+              </h2>
+              <p className="section-desc">
+                Our engineering team works alongside yours to connect, configure,
+                and deploy — with full support through launch and beyond.
+              </p>
+            </div>
+            <div className="how-right">
+              {[
+                { n: "01", title: "Connect", desc: "Integrate your tools and data sources through our secure connector library. No custom engineering work required." },
+                { n: "02", title: "Configure", desc: "Define agent objectives in plain language. Map them to your specific workflows, approval chains, and business rules." },
+                { n: "03", title: "Deploy", desc: "Agents go live with full observability. Every decision logged, every action auditable through the dashboard." },
+                { n: "04", title: "Scale", desc: "Add agents, expand to new teams, refine behavior from real-world performance data. Marginal cost near zero." },
+              ].map((s, i) => (
+                <div key={i} className="how-step">
+                  <div className="how-num">{s.n}</div>
                   <div>
-                    <div className="author-name">{t.name}</div>
-                    <div className="author-role">{t.role}</div>
+                    <div className="how-title">{s.title}</div>
+                    <div className="how-desc">{s.desc}</div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="cta-section" id="cta">
-        <div className="cta-box">
-          <div className="cta-glow" />
-          <div style={{ position: 'relative', zIndex: 1 }}>
-            <div className="cta-emoji">🚀</div>
-            <h2 className="cta-title">Ready to deploy<br /><span className="gradient-text">super intelligence?</span></h2>
-            <p className="cta-sub">Join 500+ companies already running ThoughtWorks agents. First 30 days free. No credit card required.</p>
-            <div className="cta-form">
-              <input type="email" placeholder="your@company.com" className="cta-input" />
-              <a href="#" className="btn-big">Get Early Access →</a>
-            </div>
-            <div className="cta-fine">Limited spots available · SOC2 Certified · Cancel anytime</div>
+      <section className="cta-section" id="access">
+        <div className="section-inner">
+          <div className="cta-center">
+            <h2 className="heading-lg">
+              Start building with
+              <br />
+              super intelligent agents.
+            </h2>
+            <p className="section-desc" style={{ margin: '0 auto 32px' }}>
+              Reach out to learn more about the ThoughtWorks Super Intelligent
+              Agent Platform. Our team will be in touch within one business day.
+            </p>
+            <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-primary">
+              Contact Us — info@thoughtworks.ai
+              <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer>
+      <footer className="footer">
         <div className="footer-inner">
-          <div className="nav-logo">
-            <div className="logo-icon">TW</div>
-            ThoughtWorks<span className="gradient-text">.ai</span>
-          </div>
-          <div className="footer-copy">© 2026 ThoughtWorks AI. Building the future of autonomous intelligence.</div>
+          <a href="#" className="nav-logo">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="7" fill="#e6007e" />
+              <path d="M7 10h6v2h-2v8h-2v-8H7v-2zm8 0h5l3 10h-2.5L18.8 14 17 20h-2.5l.5-10z" fill="white" />
+            </svg>
+            ThoughtWorks
+          </a>
+          <div className="footer-copy">&copy; 2026 ThoughtWorks, Inc. All rights reserved.</div>
           <div className="footer-links">
             <a href="#">Privacy</a>
             <a href="#">Terms</a>
+            <a href="#">Security</a>
             <a href="#">Contact</a>
           </div>
         </div>
       </footer>
-
     </main>
   );
 }

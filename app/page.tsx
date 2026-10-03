@@ -4,8 +4,8 @@ export default function Home() {
       {/* Nav */}
       <nav className="nav">
         <div className="nav-inner">
-          <a href="#" className="nav-logo">
-            <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+          <a href="#" className="nav-logo" aria-label="ThoughtWorks homepage">
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
               <rect width="32" height="32" rx="7" fill="#c8003c" />
               <path d="M7 10h6v2h-2v8h-2v-8H7v-2zm8 0h5l3 10h-2.5L18.8 14 17 20h-2.5l.5-10z" fill="white" />
             </svg>
@@ -270,7 +270,7 @@ export default function Home() {
             ].map((s, i) => (
               <div key={i} className="arch-infra-card">
                 <div className="arch-infra-dot" style={{ background: s.color }} />
-                <div className="arch-infra-name">{s.name}</div>
+                <h3 className="arch-infra-name">{s.name}</h3>
                 <div className="arch-infra-detail">{s.detail}</div>
               </div>
             ))}
@@ -326,7 +326,7 @@ export default function Home() {
               { label: "Continuous Learning", body: "Agents improve from feedback and outcomes over time — refining their approach without retraining or manual tuning." },
             ].map((c, i) => (
               <div key={i} className={`bento-card${c.wide ? " bento-wide" : ""}`}>
-                <div className="bento-label">{c.label}</div>
+                <h3 className="bento-label">{c.label}</h3>
                 <p className="bento-body">{c.body}</p>
               </div>
             ))}
@@ -362,7 +362,7 @@ export default function Home() {
             ].map((a, i) => (
               <div key={i} className="agent-card">
                 <div className="agent-domain">{a.domain}</div>
-                <div className="agent-name">{a.name}</div>
+                <h3 className="agent-name">{a.name}</h3>
                 <div className="agent-desc">{a.desc}</div>
               </div>
             ))}
@@ -398,7 +398,7 @@ export default function Home() {
                 <div key={i} className="how-step">
                   <div className="how-num">{s.n}</div>
                   <div>
-                    <div className="how-title">{s.title}</div>
+                    <h3 className="how-title">{s.title}</h3>
                     <div className="how-desc">{s.desc}</div>
                   </div>
                 </div>
@@ -430,8 +430,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-inner">
-          <a href="#" className="nav-logo">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="none">
+          <a href="#" className="nav-logo" aria-label="ThoughtWorks homepage">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="none" aria-hidden="true">
               <rect width="32" height="32" rx="7" fill="#c8003c" />
               <path d="M7 10h6v2h-2v8h-2v-8H7v-2zm8 0h5l3 10h-2.5L18.8 14 17 20h-2.5l.5-10z" fill="white" />
             </svg>

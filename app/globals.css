@@ -48,15 +48,18 @@ body {
    NAV
    ================================================================ */
 .nav {
-  position: fixed; inset: 0 0 auto; z-index: 100;
-  height: 56px; display: flex; align-items: center;
-  background: rgba(248,246,241,0.88);
-  backdrop-filter: blur(16px) saturate(1.6);
-  border-bottom: 1px solid var(--border-subtle);
+  position: fixed;
+  top: 12px; left: 50%; transform: translateX(-50%);
+  z-index: 100;
+  width: calc(100% - 48px); max-width: 960px;
+  height: 52px; display: flex; align-items: center;
+  background: var(--bg);
+  border: 2px solid var(--text);
+  border-radius: 9999px;
 }
 .nav-inner {
-  width: 100%; max-width: 1140px;
-  margin: 0 auto; padding: 0 32px;
+  width: 100%; max-width: none;
+  margin: 0; padding: 0 8px 0 20px;
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
@@ -79,9 +82,9 @@ body {
 }
 .nav-links a:hover { color: var(--text); }
 .btn-nav {
-  padding: 8px 18px; border-radius: 8px;
+  padding: 8px 18px; border-radius: 9999px;
   background: var(--accent); color: white;
-  border: 2px solid var(--accent);
+  border: none;
   font-size: 13px; font-weight: 600;
   text-decoration: none; transition: background 0.15s;
 }
@@ -112,13 +115,15 @@ body {
 }
 .nav-drawer {
   display: none;
-  position: fixed; inset: 56px 0 0;
-  background: rgba(248,246,241,0.97);
-  backdrop-filter: blur(20px);
-  padding: 24px 32px;
+  position: fixed;
+  top: 68px; left: 50%; transform: translateX(-50%);
+  width: calc(100% - 48px); max-width: 960px;
+  background: var(--bg);
+  padding: 16px 20px;
   flex-direction: column; gap: 4px;
   z-index: 99;
-  border-top: 1px solid var(--border-subtle);
+  border: 2px solid var(--text);
+  border-radius: 24px;
 }
 .nav-drawer > label,
 .nav-drawer > label a {
@@ -142,7 +147,7 @@ body {
 .nav-toggle:checked ~ .nav-overlay { display: block; }
 .nav-overlay {
   display: none;
-  position: fixed; inset: 56px 0 0;
+  position: fixed; inset: 0;
   z-index: 98; cursor: pointer;
   background: rgba(0,0,0,0.15);
 }
@@ -744,18 +749,20 @@ body {
 .bento {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 1px; background: var(--border);
-  border: 1px solid var(--border); border-radius: 14px;
+  border: 2px solid var(--border); border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
 }
 .bento-card {
-  background: var(--bg);
+  background: white;
   padding: 36px;
   transition: background 0.2s;
 }
 .bento-card:hover { background: var(--bg-warm); }
-.bento-wide { grid-column: span 2; }
-.bento-label { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.bento-label {
+  font-family: var(--serif);
+  font-size: 17px; font-weight: 400;
+  color: var(--text); margin-bottom: 12px;
+}
 .bento-body { font-size: 14px; color: var(--text-2); line-height: 1.75; }
 
 /* ================================================================
@@ -865,18 +872,12 @@ body {
 /* ================================================================
    LOGO BAR (inside arch chamber)
    ================================================================ */
-.arch-logo-bar {
-}
 .logo-bar-label {
   font-family: var(--mono);
   font-size: 10px; font-weight: 600;
   letter-spacing: 2px; text-transform: uppercase;
   color: var(--ink-text-2);
   margin-bottom: 20px; text-align: center;
-}
-.logo-grid {
-  display: flex; flex-wrap: wrap;
-  gap: 8px; justify-content: center;
 }
 .logo-pill {
   font-family: var(--mono);
@@ -1060,9 +1061,11 @@ body {
    RESPONSIVE
    ================================================================ */
 @media (max-width: 960px) {
+  .nav { top: 8px; width: calc(100% - 24px); height: 48px; }
+  .nav-inner { padding: 0 6px 0 16px; }
+  .nav-drawer { top: 60px; width: calc(100% - 24px); border-radius: 20px; }
   .how-layout { grid-template-columns: 1fr; gap: 48px; }
   .bento { grid-template-columns: 1fr; }
-  .bento-wide { grid-column: span 1; }
   .agent-grid { grid-template-columns: repeat(2, 1fr); }
   .arch-grid { grid-template-columns: repeat(2, 1fr); }
   .arch-pipe-nodes { flex-wrap: wrap; gap: 8px; justify-content: center; }
@@ -1070,7 +1073,6 @@ body {
   .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .usecase-grid { grid-template-columns: 1fr; }
   .faq-layout { grid-template-columns: 1fr; gap: 48px; }
-  .logo-grid { gap: 6px; }
   /* Nav: hide inline links, show hamburger */
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }

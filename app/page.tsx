@@ -1,12 +1,14 @@
 export default function Home() {
   return (
-    <main>
+    <main id="main">
+      <a href="#main" className="skip-link">Skip to content</a>
       {/* Nav */}
-      <nav className="nav">
+      <nav className="nav" aria-label="Main navigation">
+        <input type="checkbox" id="nav-toggle" className="nav-toggle" aria-hidden="true" />
         <div className="nav-inner">
           <a href="#" className="nav-logo" aria-label="ThoughtWorks homepage">
             <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <rect width="32" height="32" rx="7" fill="#c8003c" />
+              <rect width="32" height="32" rx="7" fill="#9B2335" />
               <path d="M7 10h6v2h-2v8h-2v-8H7v-2zm8 0h5l3 10h-2.5L18.8 14 17 20h-2.5l.5-10z" fill="white" />
             </svg>
             ThoughtWorks
@@ -17,6 +19,17 @@ export default function Home() {
             <li><a href="#agents">Agents</a></li>
             <li><a href="#how">How It Works</a></li>
           </ul>
+          <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-nav">Request Access</a>
+          <label htmlFor="nav-toggle" className="nav-hamburger" aria-label="Toggle menu">
+            <span /><span /><span />
+          </label>
+        </div>
+        <label htmlFor="nav-toggle" className="nav-overlay" aria-hidden="true" />
+        <div className="nav-drawer">
+          <label htmlFor="nav-toggle"><a href="#architecture">Architecture</a></label>
+          <label htmlFor="nav-toggle"><a href="#platform">Platform</a></label>
+          <label htmlFor="nav-toggle"><a href="#agents">Agents</a></label>
+          <label htmlFor="nav-toggle"><a href="#how">How It Works</a></label>
           <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-nav">Request Access</a>
         </div>
       </nav>
@@ -46,7 +59,7 @@ export default function Home() {
         </div>
 
         {/* ── Animated Dashboard Demo ── */}
-        <div className="demo-wrap">
+        <div className="demo-wrap" role="img" aria-label="Animated demo of the ThoughtWorks Agent Platform showing agents analyzing a pipeline and generating a risk report">
           <div className="demo">
             {/* Title bar */}
             <div className="demo-titlebar">
@@ -351,16 +364,16 @@ export default function Home() {
           </div>
           <div className="agent-grid">
             {[
-              { name: "Revenue Agent", domain: "Sales", desc: "Pipeline analysis, lead scoring, deal risk assessment, forecast generation." },
-              { name: "Research Agent", domain: "Intelligence", desc: "Market analysis, competitive monitoring, trend identification, report synthesis." },
-              { name: "Engineering Agent", domain: "Development", desc: "Code review, test generation, incident triage, deployment automation." },
-              { name: "Operations Agent", domain: "Ops", desc: "Workflow orchestration, bottleneck detection, resource allocation." },
-              { name: "Finance Agent", domain: "Finance", desc: "P&L monitoring, expense categorization, cash flow forecasting, anomaly detection." },
-              { name: "Support Agent", domain: "Customer", desc: "Ticket classification, response drafting, escalation routing." },
-              { name: "Compliance Agent", domain: "Legal", desc: "Contract review, risk flagging, regulatory monitoring, policy enforcement." },
-              { name: "Marketing Agent", domain: "Growth", desc: "Campaign analysis, content optimization, audience segmentation." },
+              { name: "Revenue Agent", domain: "Sales", key: "sales", desc: "Pipeline analysis, lead scoring, deal risk assessment, forecast generation." },
+              { name: "Research Agent", domain: "Intelligence", key: "intelligence", desc: "Market analysis, competitive monitoring, trend identification, report synthesis." },
+              { name: "Engineering Agent", domain: "Development", key: "development", desc: "Code review, test generation, incident triage, deployment automation." },
+              { name: "Operations Agent", domain: "Ops", key: "ops", desc: "Workflow orchestration, bottleneck detection, resource allocation." },
+              { name: "Finance Agent", domain: "Finance", key: "finance", desc: "P&L monitoring, expense categorization, cash flow forecasting, anomaly detection." },
+              { name: "Support Agent", domain: "Customer", key: "customer", desc: "Ticket classification, response drafting, escalation routing." },
+              { name: "Compliance Agent", domain: "Legal", key: "legal", desc: "Contract review, risk flagging, regulatory monitoring, policy enforcement." },
+              { name: "Marketing Agent", domain: "Growth", key: "growth", desc: "Campaign analysis, content optimization, audience segmentation." },
             ].map((a, i) => (
-              <div key={i} className="agent-card">
+              <div key={i} className="agent-card" data-domain={a.key}>
                 <div className="agent-domain">{a.domain}</div>
                 <h3 className="agent-name">{a.name}</h3>
                 <div className="agent-desc">{a.desc}</div>
@@ -390,10 +403,10 @@ export default function Home() {
             </div>
             <div className="how-right">
               {[
-                { n: "01", title: "Connect", desc: "Integrate your tools and data sources through our secure connector library. No custom engineering work required." },
-                { n: "02", title: "Configure", desc: "Define agent objectives in plain language. Map them to your specific workflows, approval chains, and business rules." },
-                { n: "03", title: "Deploy", desc: "Agents go live with full observability. Every decision logged, every action auditable through the dashboard." },
-                { n: "04", title: "Scale", desc: "Add agents, expand to new teams, refine behavior from real-world performance data. Marginal cost near zero." },
+                { n: "01", title: "Map your systems", desc: "We connect your CRM, data warehouse, ticketing, and communication tools through MCP servers and pre-built connectors. Auth, permissions, and data residency handled from day one." },
+                { n: "02", title: "Define agent objectives", desc: "Describe what each agent should accomplish in plain language. The platform decomposes goals into orchestration plans, tool selections, and guardrail boundaries — no prompt engineering required." },
+                { n: "03", title: "Launch with observability", desc: "Agents run inside isolated harnesses with full trace logging. Every LLM call, tool invocation, and decision point is auditable in the dashboard. Human-in-the-loop approvals where you need them." },
+                { n: "04", title: "Learn and expand", desc: "Agents improve from feedback loops and outcome data. Add new agents per function, extend to additional teams. Each agent costs compute, not headcount." },
               ].map((s, i) => (
                 <div key={i} className="how-step">
                   <div className="how-num">{s.n}</div>
@@ -432,17 +445,16 @@ export default function Home() {
         <div className="footer-inner">
           <a href="#" className="nav-logo" aria-label="ThoughtWorks homepage">
             <svg width="18" height="18" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <rect width="32" height="32" rx="7" fill="#c8003c" />
+              <rect width="32" height="32" rx="7" fill="#9B2335" />
               <path d="M7 10h6v2h-2v8h-2v-8H7v-2zm8 0h5l3 10h-2.5L18.8 14 17 20h-2.5l.5-10z" fill="white" />
             </svg>
             ThoughtWorks
           </a>
           <div className="footer-copy">&copy; 2026 ThoughtWorks, Inc. All rights reserved.</div>
           <div className="footer-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Security</a>
-            <a href="#">Contact</a>
+            <a href="mailto:info@thoughtworks.ai">Contact</a>
+            <a href="https://www.thoughtworks.com/about-us/privacy-policy">Privacy</a>
+            <a href="https://www.thoughtworks.com/about-us/social-media-terms-and-conditions">Terms</a>
           </div>
         </div>
       </footer>

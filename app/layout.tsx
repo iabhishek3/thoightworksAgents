@@ -13,30 +13,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Agent Platform for Enterprise | ThoughtWorks",
+  title: "ThoughtWorks Super Intelligent Agent Platform | AI Agents for Enterprise",
   description:
-    "Deploy autonomous AI agents that reason, plan, and execute across your enterprise. Multi-agent orchestration, 50+ integrations, SOC 2 certified. Start in days, not months.",
+    "ThoughtWorks Super Intelligent Agent Platform — deploy autonomous AI agents that reason, plan, and execute across your enterprise. Agentic AI with multi-agent orchestration, 50+ integrations, SOC 2 certified.",
   keywords: [
+    "ThoughtWorks AI",
+    "ThoughtWorks AI agents",
+    "ThoughtWorks super intelligent agent platform",
+    "super intelligent AI agents",
+    "super intelligence AI platform",
+    "superintelligent AI",
     "AI agent platform",
     "enterprise AI agents",
     "autonomous AI agents",
     "agentic AI platform",
+    "agentic AI",
     "multi-agent orchestration",
     "AI workflow automation",
     "AI agent orchestration platform",
     "AI automation platform enterprise",
     "intelligent agent automation",
     "AI agents for business",
+    "AI agents",
+    "super intelligence",
+    "superintelligence platform",
   ],
   alternates: {
     canonical: "https://agents.thoughtworks.com/",
   },
   openGraph: {
-    title: "ThoughtWorks — Enterprise AI Agent Platform",
+    title: "ThoughtWorks Super Intelligent Agent Platform — Agentic AI for Enterprise",
     description:
-      "Autonomous AI agents for enterprise operations. Multi-agent orchestration, full observability, and enterprise-grade security.",
+      "Super intelligent AI agents for enterprise operations. Autonomous, agentic AI with multi-agent orchestration, full observability, and enterprise-grade security.",
     url: "https://agents.thoughtworks.com/",
-    siteName: "ThoughtWorks Agent Platform",
+    siteName: "ThoughtWorks Super Intelligent Agent Platform",
     images: [
       {
         url: "https://agents.thoughtworks.com/og-image.png",
@@ -50,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ThoughtWorks — Enterprise AI Agent Platform",
+    title: "ThoughtWorks Super Intelligent Agent Platform — AI Agents for Enterprise",
     description:
-      "Autonomous AI agents that reason, plan, and execute across your enterprise.",
+      "Super intelligent, autonomous AI agents that reason, plan, and execute across your enterprise. Agentic AI by ThoughtWorks.",
     images: ["https://agents.thoughtworks.com/og-image.png"],
     creator: "@thoughtworks",
     site: "@thoughtworks",
@@ -88,7 +98,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               url: "https://agents.thoughtworks.com",
               logo: "https://agents.thoughtworks.com/icon.svg",
               description:
-                "ThoughtWorks builds autonomous AI agent platforms for enterprise operations, enabling multi-agent orchestration, AI workflow automation, and agentic AI at scale.",
+                "ThoughtWorks builds the Super Intelligent Agent Platform for enterprise operations — enabling autonomous AI agents, multi-agent orchestration, agentic AI, and superintelligent workflow automation at scale.",
               contactPoint: {
                 "@type": "ContactPoint",
                 email: "info@thoughtworks.ai",
@@ -108,12 +118,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "ThoughtWorks Agent Platform",
+              name: "ThoughtWorks Super Intelligent Agent Platform",
               applicationCategory: "BusinessApplication",
+              applicationSubCategory: "Agentic AI Platform",
               operatingSystem: "Web",
               url: "https://agents.thoughtworks.com",
               description:
-                "Autonomous AI agent platform for enterprise. Deploy coordinated AI agents that reason, plan, and execute multi-step workflows with full observability and SOC 2 Type II security.",
+                "ThoughtWorks Super Intelligent Agent Platform — deploy autonomous, superintelligent AI agents that reason, plan, and execute multi-step enterprise workflows with full observability and SOC 2 Type II security.",
               featureList: [
                 "Multi-Agent Orchestration",
                 "AI Workflow Automation",
@@ -142,8 +153,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "ThoughtWorks Agent Platform",
-              alternateName: "ThoughtWorks AI Agents",
+              name: "ThoughtWorks Super Intelligent Agent Platform",
+              alternateName: ["ThoughtWorks AI", "ThoughtWorks AI Agents", "ThoughtWorks Agentic AI"],
               url: "https://agents.thoughtworks.com",
             }),
           }}

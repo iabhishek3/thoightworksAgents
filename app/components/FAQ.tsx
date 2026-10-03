@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 export default function FAQ() {
   const faqs = [
     {
@@ -26,28 +30,35 @@ export default function FAQ() {
     },
   ];
 
+  const [active, setActive] = useState(0);
+
   return (
     <section className="section" id="faq">
       <div className="section-inner">
-        <div className="faq-layout">
-          <div className="reveal">
-            <p className="eyebrow">Questions</p>
-            <h2 className="heading-lg">
-              Frequently asked
-              <br />
-              questions.
-            </h2>
-            <p className="section-desc">
-              Everything you need to know about deploying and operating AI agents at scale.
-            </p>
-          </div>
-          <div className="faq-list">
+        <div className="faq-header reveal">
+          <p className="eyebrow">Questions</p>
+          <h2 className="heading-lg">
+            Frequently asked<br />
+            <em>questions.</em>
+          </h2>
+        </div>
+        <div className="faq-panel reveal">
+          <div className="faq-questions">
+            <div className="faq-questions-label">Questions</div>
             {faqs.map((faq, i) => (
-              <details key={i} className={`faq-item reveal reveal-d${i + 1}`}>
-                <summary className="faq-question">{faq.question}</summary>
-                <div className="faq-answer">{faq.answer}</div>
-              </details>
+              <button
+                key={i}
+                className={`faq-q${i === active ? " faq-q-active" : ""}`}
+                onClick={() => setActive(i)}
+              >
+                {faq.question}
+              </button>
             ))}
+          </div>
+          <div className="faq-answer-panel">
+            <div className="faq-answer-label">Answer</div>
+            <div className="faq-answer-question">{faqs[active].question}</div>
+            <div className="faq-answer-body">{faqs[active].answer}</div>
           </div>
         </div>
       </div>

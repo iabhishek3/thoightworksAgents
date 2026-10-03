@@ -27,6 +27,9 @@
   --ink-border: #2A2A34;
   --ink-text: #CACACE;
   --ink-text-2: #72727A;
+  --forest: #034f46;
+  --forest-hover: #046354;
+  --stone: #e4e4d0;
   --mono: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
   --sans: var(--font-sans), "Instrument Sans", system-ui, -apple-system, sans-serif;
   --serif: var(--font-serif), "EB Garamond", "Georgia", serif;
@@ -980,43 +983,90 @@ body {
 }
 
 /* ================================================================
-   FAQ
+   FAQ — Wispr Flow style
    ================================================================ */
-.faq-layout {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 80px; align-items: start;
+.faq-header {
+  text-align: center;
+  margin-bottom: 48px;
 }
-.faq-list {
-  display: flex; flex-direction: column;
+.faq-header em {
+  font-style: italic;
 }
-.faq-item {
-  border-bottom: 2px solid var(--border);
+.faq-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--stone);
+  border-radius: 32px;
+  overflow: hidden;
+  border: 2px solid var(--stone);
 }
-.faq-item:first-of-type { border-top: 2px solid var(--border); }
-.faq-question {
-  display: flex; align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
-  font-size: 15px; font-weight: 600;
-  color: var(--text); cursor: pointer;
-  list-style: none;
-  transition: color 0.15s;
+.faq-questions {
+  background: var(--forest);
+  padding: 32px;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
-.faq-question::-webkit-details-marker { display: none; }
-.faq-question::after {
-  content: "+"; font-family: var(--mono);
-  font-size: 18px; color: var(--text-3);
-  flex-shrink: 0; margin-left: 16px;
-  transition: transform 0.2s;
+.faq-questions-label {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 24px;
 }
-.faq-item[open] .faq-question::after {
-  content: "−";
+.faq-q {
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  text-align: left;
+  padding: 16px 20px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 0;
+  line-height: 1.5;
 }
-.faq-item[open] .faq-question { color: var(--text); }
-.faq-answer {
-  padding: 0 0 20px;
-  font-size: 14px; color: var(--text-2);
-  line-height: 1.75; max-width: 540px;
+.faq-q:hover {
+  color: rgba(255,255,255,0.9);
+}
+.faq-q-active {
+  color: white;
+  background: rgba(255,255,255,0.08);
+  border-left-color: white;
+  font-weight: 500;
+}
+.faq-answer-panel {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.faq-answer-label {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+.faq-answer-question {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-3);
+  text-align: right;
+  margin-bottom: 16px;
+}
+.faq-answer-body {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.75;
 }
 
 /* ================================================================
@@ -1113,7 +1163,9 @@ body {
   .arch-pipe-arrow { width: 24px; }
   .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .usecase-grid { grid-template-columns: 1fr; }
-  .faq-layout { grid-template-columns: 1fr; gap: 48px; }
+  .faq-panel { grid-template-columns: 1fr; }
+  .faq-questions { border-radius: 28px 28px 0 0; }
+  .faq-answer-panel { padding: 32px; }
   /* Nav: hide inline links, show hamburger */
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
@@ -1171,6 +1223,9 @@ body {
   .demo-feed-item:nth-child(n+4) { display: none; }
   .demo-feed-item { opacity: 1; animation: none; transform: none; }
   .demo-body { min-height: auto; }
+  .faq-questions { padding: 24px; }
+  .faq-q { padding: 14px 16px; font-size: 14px; }
+  .faq-answer-panel { padding: 24px; }
 }
 
 /* ================================================================

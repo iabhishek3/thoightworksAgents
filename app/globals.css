@@ -27,8 +27,9 @@
   --ink-border: #2A2A34;
   --ink-text: #CACACE;
   --ink-text-2: #72727A;
-  --mono: "Geist Mono", ui-monospace, monospace;
-  --sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --mono: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
+  --sans: var(--font-sans), "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --serif: var(--font-serif), "EB Garamond", "Georgia", serif;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -80,6 +81,7 @@ body {
 .btn-nav {
   padding: 8px 18px; border-radius: 8px;
   background: var(--accent); color: white;
+  border: 2px solid var(--accent);
   font-size: 13px; font-weight: 600;
   text-decoration: none; transition: background 0.15s;
 }
@@ -179,8 +181,9 @@ body {
   color: var(--label); margin-bottom: 20px;
 }
 .hero h1 {
+  font-family: var(--serif);
   font-size: clamp(48px, 7vw, 88px);
-  font-weight: 800; line-height: 1.02;
+  font-weight: 400; line-height: 0.9;
   letter-spacing: -3px; color: var(--text);
   margin-bottom: 16px;
 }
@@ -198,6 +201,7 @@ body {
 .btn-primary {
   padding: 12px 26px; border-radius: 8px;
   background: var(--accent); color: white;
+  border: 2px solid var(--accent);
   font-size: 14px; font-weight: 600;
   text-decoration: none; transition: background 0.15s;
   display: inline-flex; align-items: center; gap: 8px;
@@ -207,7 +211,7 @@ body {
   padding: 12px 26px; border-radius: 8px;
   background: transparent; color: var(--text-2);
   font-size: 14px; font-weight: 500;
-  text-decoration: none; border: 1px solid var(--border);
+  text-decoration: none; border: 2px solid var(--text);
   transition: all 0.15s;
   display: inline-flex; align-items: center; gap: 8px;
 }
@@ -223,7 +227,7 @@ body {
 .demo {
   background: var(--ink);
   border: 1px solid var(--ink-border);
-  border-radius: 16px; overflow: hidden;
+  border-radius: 24px; overflow: hidden;
   box-shadow: 0 32px 80px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
 }
 .demo-titlebar {
@@ -503,7 +507,6 @@ body {
 
 /* Trust bar */
 .trust-bar {
-  border-top: 1px solid var(--border-subtle);
   padding: 22px 0;
   margin-top: 56px;
 }
@@ -528,6 +531,11 @@ body {
   padding: 100px 32px;
   color: white;
 }
+.arch-divider {
+  height: 1px;
+  background: var(--ink-border);
+  margin: 48px 0;
+}
 .arch-header {
   text-align: center;
   margin-bottom: 64px;
@@ -539,9 +547,10 @@ body {
   color: var(--ink-text-2); margin-bottom: 14px;
 }
 .heading-lg-light {
+  font-family: var(--serif);
   font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: 800; line-height: 1.15;
-  letter-spacing: -1.2px; color: white;
+  font-weight: 400; line-height: 0.95;
+  letter-spacing: -1.5px; color: white;
   margin-bottom: 16px;
 }
 .arch-desc {
@@ -553,7 +562,7 @@ body {
 .arch-pipeline {
   background: var(--ink-2);
   border: 1px solid var(--ink-border);
-  border-radius: 14px;
+  border-radius: 32px;
   padding: 32px;
   margin-bottom: 16px;
 }
@@ -606,7 +615,7 @@ body {
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: 1px; background: var(--ink-border);
   border: 1px solid var(--ink-border);
-  border-radius: 12px; overflow: hidden;
+  border-radius: 32px; overflow: hidden;
   margin-bottom: 16px;
 }
 .arch-infra-card {
@@ -632,7 +641,7 @@ body {
 /* Trace feed */
 .arch-trace {
   border: 1px solid var(--ink-border);
-  border-radius: 12px; overflow: hidden;
+  border-radius: 24px; overflow: hidden;
   background: var(--ink-2);
 }
 .arch-trace-header {
@@ -680,14 +689,9 @@ body {
 .t-blue   { background: rgba(37,99,235,0.15); color: #60a5fa; }
 
 /* ================================================================
-   IMPACT NUMBERS
+   IMPACT NUMBERS (inside arch chamber)
    ================================================================ */
-.impact-section {
-  background: var(--ink-2);
-  padding: 100px 32px;
-}
 .impact-grid {
-  max-width: 1140px; margin: 0 auto;
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: 48px;
 }
@@ -723,8 +727,9 @@ body {
   color: var(--label); margin-bottom: 14px;
 }
 .heading-lg {
+  font-family: var(--serif);
   font-size: clamp(30px, 3.8vw, 46px);
-  font-weight: 800; line-height: 1.12;
+  font-weight: 400; line-height: 0.95;
   letter-spacing: -1.5px; color: var(--text);
   margin-bottom: 16px;
 }
@@ -832,9 +837,10 @@ body {
   max-width: 560px; margin: 0 auto;
 }
 .cta-section h2 {
+  font-family: var(--serif);
   font-size: clamp(26px, 3.5vw, 40px);
-  font-weight: 800; letter-spacing: -1px;
-  color: white; margin-bottom: 16px; line-height: 1.15;
+  font-weight: 400; letter-spacing: -0.5px;
+  color: white; margin-bottom: 16px; line-height: 1.1;
 }
 .cta-section p {
   color: rgba(255,255,255,0.45); font-size: 15px;
@@ -844,7 +850,7 @@ body {
   padding: 14px 32px; border-radius: 8px;
   background: #F0EDE6;
   color: var(--text);
-  border: 1px solid #F0EDE6;
+  border: 2px solid #F0EDE6;
   font-size: 14px; font-weight: 600;
   text-decoration: none;
   transition: all 0.2s;
@@ -857,16 +863,9 @@ body {
 }
 
 /* ================================================================
-   LOGO BAR
+   LOGO BAR (inside arch chamber)
    ================================================================ */
-.logo-bar {
-  background: var(--ink);
-  padding: 48px 32px;
-  border-top: 1px solid var(--ink-border);
-  border-bottom: 1px solid var(--ink-border);
-}
-.logo-bar-inner {
-  max-width: 1140px; margin: 0 auto;
+.arch-logo-bar {
 }
 .logo-bar-label {
   font-family: var(--mono);
@@ -949,9 +948,9 @@ body {
   display: flex; flex-direction: column;
 }
 .faq-item {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--border);
 }
-.faq-item:first-of-type { border-top: 1px solid var(--border); }
+.faq-item:first-of-type { border-top: 2px solid var(--border); }
 .faq-question {
   display: flex; align-items: center;
   justify-content: space-between;
@@ -1022,7 +1021,6 @@ body {
    FOOTER
    ================================================================ */
 .footer {
-  border-top: 1px solid var(--border);
   padding: 32px 32px; background: var(--bg);
 }
 .footer-inner {
@@ -1094,7 +1092,29 @@ body {
 }
 @media (max-width: 600px) {
   .hero { padding-top: 120px; }
-  .hero h1 { letter-spacing: -1.5px; }
+  /* M1: Headline overflow fix */
+  .hero h1 { font-size: clamp(32px, 8vw, 48px); letter-spacing: -1.5px; line-height: 1.0; }
+  /* M2: Nav cramped fix */
+  .nav-logo-sub { display: none; }
+  .btn-nav { padding: 6px 12px; font-size: 12px; }
+  /* M3: CTA buttons stacking fix */
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-ghost {
+    text-align: center;
+    justify-content: center;
+  }
+  /* M4: Agent pills clipping fix */
+  .demo-agent {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+  .demo-sidebar {
+    padding-right: 32px;
+  }
   .agent-grid { grid-template-columns: 1fr; }
   .arch-grid { grid-template-columns: 1fr; }
   .arch-pipe-nodes { flex-direction: column; align-items: center; }
@@ -1111,6 +1131,145 @@ body {
 }
 
 /* ================================================================
+   A1 — SCROLL REVEALS
+   ================================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger delays for grids */
+.reveal-d1 { transition-delay: 80ms; }
+.reveal-d2 { transition-delay: 160ms; }
+.reveal-d3 { transition-delay: 240ms; }
+.reveal-d4 { transition-delay: 320ms; }
+.reveal-d5 { transition-delay: 400ms; }
+.reveal-d6 { transition-delay: 480ms; }
+.reveal-d7 { transition-delay: 560ms; }
+
+/* ================================================================
+   A4 — DASHBOARD DEMO: pause until visible
+   ================================================================ */
+.demo:not(.demo-playing) .da-research,
+.demo:not(.demo-playing) .da-revenue,
+.demo:not(.demo-playing) .da-ops,
+.demo:not(.demo-playing) .da-support,
+.demo:not(.demo-playing) .da-research .demo-agent-dot,
+.demo:not(.demo-playing) .da-revenue .demo-agent-dot,
+.demo:not(.demo-playing) .da-ops .demo-agent-dot,
+.demo:not(.demo-playing) .ds-1,
+.demo:not(.demo-playing) .ds-2,
+.demo:not(.demo-playing) .ds-3,
+.demo:not(.demo-playing) .ds-4,
+.demo:not(.demo-playing) .ds-1 .demo-check-done,
+.demo:not(.demo-playing) .ds-1 .demo-check-empty,
+.demo:not(.demo-playing) .ds-2 .demo-check-done,
+.demo:not(.demo-playing) .ds-2 .demo-check-empty,
+.demo:not(.demo-playing) .ds-3 .demo-check-done,
+.demo:not(.demo-playing) .ds-3 .demo-check-empty,
+.demo:not(.demo-playing) .ds-4 .demo-check-done,
+.demo:not(.demo-playing) .ds-4 .demo-check-empty,
+.demo:not(.demo-playing) .demo-progress-bar,
+.demo:not(.demo-playing) .demo-result,
+.demo:not(.demo-playing) .demo-feed-item,
+.demo:not(.demo-playing) .demo-progress-pct::after,
+.demo:not(.demo-playing) .dm-tasks::after,
+.demo:not(.demo-playing) .dm-time::after,
+.demo:not(.demo-playing) .demo-task-tag,
+.demo:not(.demo-playing) .demo-task-title {
+  animation-play-state: paused;
+}
+
+/* ================================================================
+   A5 — AGENT CARD HOVER
+   ================================================================ */
+.agent-card {
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.agent-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.agent-domain::before {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.agent-card:hover .agent-domain::before {
+  transform: scale(1.33);
+}
+.agent-card[data-domain="sales"]:hover .agent-domain::before { box-shadow: 0 0 8px rgba(37,99,235,0.5); }
+.agent-card[data-domain="intelligence"]:hover .agent-domain::before { box-shadow: 0 0 8px rgba(124,58,237,0.5); }
+.agent-card[data-domain="development"]:hover .agent-domain::before { box-shadow: 0 0 8px rgba(22,163,74,0.5); }
+.agent-card[data-domain="ops"]:hover .agent-domain::before { box-shadow: 0 0 8px rgba(217,119,6,0.5); }
+.agent-card[data-domain="finance"]:hover .agent-domain::before { box-shadow: 0 0 8px rgba(8,145,178,0.5); }
+.agent-card[data-domain="customer"]:hover .agent-domain::before { box-shadow: 0 0 8px rgba(37,99,235,0.5); }
+.agent-card[data-domain="legal"]:hover .agent-domain::before { box-shadow: 0 0 8px rgba(155,35,53,0.5); }
+.agent-card[data-domain="growth"]:hover .agent-domain::before { box-shadow: 0 0 8px rgba(5,150,105,0.5); }
+
+/* ================================================================
+   A6 — HERO TYPING EFFECT
+   ================================================================ */
+.typing-active::after {
+  content: "▎";
+  font-weight: 300;
+  animation: cursor-blink 0.6s step-end infinite;
+  margin-left: 1px;
+}
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* ================================================================
+   A7 — ARCHITECTURE GRID DATA PULSE
+   ================================================================ */
+.arch-infra-card {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-position: 0 0;
+  transition: background 0.15s, background-position 2s ease;
+}
+.arch-infra-card:hover {
+  background-position: 4px 4px;
+}
+
+/* ================================================================
+   A9 — LOGO BAR MARQUEE
+   ================================================================ */
+.logo-grid {
+  overflow: hidden;
+  position: relative;
+}
+.logo-grid-track {
+  display: flex; gap: 8px;
+  animation: marquee 40s linear infinite;
+  width: max-content;
+}
+.logo-grid-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ================================================================
+   A10 — CTA BACKGROUND PULSE
+   ================================================================ */
+.cta-section {
+  background: var(--text) radial-gradient(ellipse at center, rgba(155,35,53,0.06) 0%, transparent 70%);
+  background-size: 100% 100%;
+  animation: cta-pulse 4s ease-in-out infinite;
+}
+@keyframes cta-pulse {
+  0%, 100% { background-size: 100% 100%; }
+  50% { background-size: 120% 120%; }
+}
+
+/* ================================================================
    REDUCED MOTION
    ================================================================ */
 @media (prefers-reduced-motion: reduce) {
@@ -1119,6 +1278,7 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  .reveal { opacity: 1; transform: none; }
   .demo-live-dot, .arch-trace-live { animation: none; opacity: 1; }
   .demo-subtask, .demo-feed-item, .demo-task-tag,
   .demo-task-title, .demo-result, .arch-trace-line {
@@ -1127,4 +1287,7 @@ body {
   .demo-progress-bar { width: 100%; background: var(--green); }
   .demo-check-done { opacity: 1; }
   .demo-check-empty { opacity: 0; }
+  .typing-active::after { display: none; }
+  .logo-grid-track { animation: none; }
+  .cta-section { animation: none; }
 }

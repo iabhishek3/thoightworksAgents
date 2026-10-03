@@ -30,7 +30,7 @@ export default function FAQ() {
     <section className="section" id="faq">
       <div className="section-inner">
         <div className="faq-layout">
-          <div>
+          <div className="reveal">
             <p className="eyebrow">Questions</p>
             <h2 className="heading-lg">
               Frequently asked
@@ -43,7 +43,7 @@ export default function FAQ() {
           </div>
           <div className="faq-list">
             {faqs.map((faq, i) => (
-              <details key={i} className="faq-item">
+              <details key={i} className={`faq-item reveal reveal-d${i + 1}`}>
                 <summary className="faq-question">{faq.question}</summary>
                 <div className="faq-answer">{faq.answer}</div>
               </details>

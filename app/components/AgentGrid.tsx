@@ -13,7 +13,7 @@ export default function AgentGrid() {
   return (
     <section className="section section-warm" id="agents">
       <div className="section-inner">
-        <div className="section-top">
+        <div className="section-top reveal">
           <p className="eyebrow">Agent Fleet</p>
           <h2 className="heading-lg">
             A specialist for
@@ -27,7 +27,7 @@ export default function AgentGrid() {
         </div>
         <div className="agent-grid">
           {agents.map((a, i) => (
-            <div key={i} className="agent-card" data-domain={a.key}>
+            <div key={i} className={`agent-card reveal reveal-d${(i % 4) + 1}`} data-domain={a.key}>
               <div className="agent-domain">{a.domain}</div>
               <h3 className="agent-name">{a.name}</h3>
               <div className="agent-desc">{a.desc}</div>

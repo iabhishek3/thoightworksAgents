@@ -13,7 +13,7 @@ export default function PlatformSection() {
   return (
     <section className="section" id="platform">
       <div className="section-inner">
-        <div className="section-top">
+        <div className="section-top reveal">
           <p className="eyebrow">Platform</p>
           <h2 className="heading-lg">
             Built for enterprise
@@ -23,7 +23,7 @@ export default function PlatformSection() {
         </div>
         <div className="bento">
           {cards.map((c, i) => (
-            <div key={i} className={`bento-card${c.wide ? " bento-wide" : ""}`}>
+            <div key={i} className={`bento-card${c.wide ? " bento-wide" : ""} reveal reveal-d${i + 1}`}>
               <h3 className="bento-label">{c.label}</h3>
               <p className="bento-body">{c.body}</p>
             </div>

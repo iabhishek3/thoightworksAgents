@@ -8,9 +8,7 @@ export default function Hero() {
       <div className="hero-top">
         <p className="hero-eyebrow">by ThoughtWorks</p>
         <h1>Superintelligence.</h1>
-        <p className="hero-subtitle">
-          Agents that think.<br />
-          Systems that act.
+        <p className="hero-subtitle" data-type="Agents that think. Systems that act." aria-label="Agents that think. Systems that act.">
         </p>
         <p className="hero-body">
           Autonomous AI agents that reason through complexity, integrate

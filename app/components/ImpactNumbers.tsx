@@ -1,9 +1,9 @@
 export default function ImpactNumbers() {
   const metrics = [
-    { number: "50+", label: "Enterprise Integrations" },
-    { number: "< 5 min", label: "Average Deployment" },
-    { number: "99.9%", label: "Uptime SLA" },
-    { number: "24/7", label: "Autonomous Operation" },
+    { countTo: "50", suffix: "+", label: "Enterprise Integrations" },
+    { display: "< 5 min", label: "Average Deployment" },
+    { countTo: "99.9", suffix: "%", label: "Uptime SLA" },
+    { display: "24/7", label: "Autonomous Operation" },
   ];
 
   return (
@@ -11,8 +11,12 @@ export default function ImpactNumbers() {
       <div className="section-inner">
         <div className="impact-grid">
           {metrics.map((metric, i) => (
-            <div key={i} className="impact-item">
-              <div className="impact-number">{metric.number}</div>
+            <div key={i} className={`impact-item reveal reveal-d${i + 1}`}>
+              {"countTo" in metric ? (
+                <div className="impact-number" data-count-to={metric.countTo} data-count-suffix={metric.suffix}>0</div>
+              ) : (
+                <div className="impact-number">{metric.display}</div>
+              )}
               <div className="impact-label">{metric.label}</div>
             </div>
           ))}

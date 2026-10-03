@@ -10,7 +10,7 @@ export default function HowItWorks() {
     <section className="how-section" id="how">
       <div className="section-inner">
         <div className="how-layout">
-          <div className="how-left">
+          <div className="how-left reveal">
             <p className="eyebrow">Process</p>
             <h2 className="heading-lg">
               From setup to
@@ -26,7 +26,7 @@ export default function HowItWorks() {
           </div>
           <div className="how-right">
             {steps.map((s, i) => (
-              <div key={i} className="how-step">
+              <div key={i} className={`how-step reveal reveal-d${i + 1}`}>
                 <div className="how-num">{s.n}</div>
                 <div>
                   <h3 className="how-title">{s.title}</h3>

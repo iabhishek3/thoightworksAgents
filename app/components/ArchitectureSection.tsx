@@ -1,4 +1,16 @@
 export default function ArchitectureSection() {
+  const impactMetrics = [
+    { countTo: "50", suffix: "+", label: "Enterprise Integrations" },
+    { display: "< 5 min", label: "Average Deployment" },
+    { countTo: "99.9", suffix: "%", label: "Uptime SLA" },
+    { display: "24/7", label: "Autonomous Operation" },
+  ];
+
+  const integrationTools = [
+    "Salesforce", "HubSpot", "Slack", "Teams", "Jira", "GitHub",
+    "Snowflake", "BigQuery", "PagerDuty", "Zendesk", "Notion", "AWS",
+  ];
+
   const pipelineNodes = [
     { title: "Task Input", sub: "Request or trigger", color: "var(--green)" },
     { title: "Orchestrator", sub: "Reason \u2192 Plan \u2192 Act", color: "var(--accent)" },
@@ -29,7 +41,7 @@ export default function ArchitectureSection() {
   return (
     <section className="arch-section" id="architecture">
       <div className="section-inner">
-        <div className="arch-header">
+        <div className="arch-header reveal">
           <p className="eyebrow-light">Architecture</p>
           <h2 className="heading-lg-light">
             Inside the agent harness.
@@ -42,7 +54,7 @@ export default function ArchitectureSection() {
         </div>
 
         {/* Pipeline flow */}
-        <div className="arch-pipeline">
+        <div className="arch-pipeline reveal">
           <div className="arch-pipe-label">Orchestration Loop</div>
           <div className="arch-pipe-nodes">
             {pipelineNodes.map((n, i) => (
@@ -66,7 +78,7 @@ export default function ArchitectureSection() {
         </div>
 
         {/* Infrastructure grid */}
-        <div className="arch-grid">
+        <div className="arch-grid reveal">
           {infraCards.map((s, i) => (
             <div key={i} className="arch-infra-card">
               <div className="arch-infra-dot" style={{ background: s.color }} />
@@ -77,7 +89,7 @@ export default function ArchitectureSection() {
         </div>
 
         {/* Live trace */}
-        <div className="arch-trace">
+        <div className="arch-trace reveal">
           <div className="arch-trace-header">
             <div className="arch-trace-live" />
             Agent Trace
@@ -90,6 +102,37 @@ export default function ArchitectureSection() {
                 <span>{l.msg}</span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Impact numbers — inside arch chamber */}
+        <div className="arch-divider" />
+        <div className="impact-grid">
+          {impactMetrics.map((metric, i) => (
+            <div key={i} className={`impact-item reveal reveal-d${i + 1}`}>
+              {"countTo" in metric ? (
+                <div className="impact-number" data-count-to={metric.countTo} data-count-suffix={metric.suffix}>0</div>
+              ) : (
+                <div className="impact-number">{metric.display}</div>
+              )}
+              <div className="impact-label">{metric.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Logo bar — inside arch chamber */}
+        <div className="arch-divider" />
+        <div className="arch-logo-bar">
+          <div className="logo-bar-label">Integrates with</div>
+          <div className="logo-grid">
+            <div className="logo-grid-track">
+              {integrationTools.map((tool, i) => (
+                <span key={i} className="logo-pill">{tool}</span>
+              ))}
+              {integrationTools.map((tool, i) => (
+                <span key={`dup-${i}`} className="logo-pill" aria-hidden="true">{tool}</span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

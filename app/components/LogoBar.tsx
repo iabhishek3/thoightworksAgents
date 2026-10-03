@@ -9,9 +9,15 @@ export default function LogoBar() {
       <div className="logo-bar-inner">
         <div className="logo-bar-label">Integrates with</div>
         <div className="logo-grid">
-          {tools.map((tool, i) => (
-            <span key={i} className="logo-pill">{tool}</span>
-          ))}
+          <div className="logo-grid-track">
+            {tools.map((tool, i) => (
+              <span key={i} className="logo-pill">{tool}</span>
+            ))}
+            {/* Duplicate for seamless loop */}
+            {tools.map((tool, i) => (
+              <span key={`dup-${i}`} className="logo-pill" aria-hidden="true">{tool}</span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

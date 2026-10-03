@@ -11,15 +11,15 @@ export default function HowItWorks() {
       <div className="section-inner">
         <div className="how-layout">
           <div className="how-left">
-            <p className="eyebrow-light">Process</p>
-            <h2 className="heading-lg-light">
+            <p className="eyebrow">Process</p>
+            <h2 className="heading-lg">
               From setup to
               <br />
               production in days,
               <br />
               not months.
             </h2>
-            <p className="arch-desc" style={{ margin: 0 }}>
+            <p className="section-desc" style={{ margin: 0 }}>
               Our engineering team works alongside yours to connect, configure,
               and deploy — with full support through launch and beyond.
             </p>

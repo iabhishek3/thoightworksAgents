@@ -27,13 +27,13 @@ export default function UseCases() {
     <section className="usecase-section" id="use-cases">
       <div className="section-inner">
         <div className="section-top">
-          <p className="eyebrow-light">Real Outcomes</p>
-          <h2 className="heading-lg-light">
+          <p className="eyebrow">Real Outcomes</p>
+          <h2 className="heading-lg">
             Agents delivering
             <br />
             measurable outcomes.
           </h2>
-          <p className="arch-desc" style={{ margin: '0 0 60px' }}>
+          <p className="section-desc" style={{ margin: '0 0 60px' }}>
             See how autonomous agents drive tangible business outcomes across enterprise teams.
           </p>
         </div>

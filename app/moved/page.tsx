@@ -41,7 +41,7 @@ export default function Moved() {
           lineHeight: 1.6,
           margin: "0 0 2.5rem",
         }}>
-          Superintelligence by ThoughtWorks is now{" "}
+          Superintelligence is now{" "}
           <strong style={{ color: "#fff" }}>Squadly SI</strong> —
           same autonomous AI agents, new home.
         </p>

@@ -1076,37 +1076,45 @@ body {
 /* ================================================================
    INTEGRATION GRID
    ================================================================ */
-.integration-grid {
-  margin-top: 48px;
+.integration-section {
+  margin-top: 64px;
   padding-top: 48px;
   border-top: 1px solid var(--border);
 }
-.integration-grid-label {
-  font-family: var(--mono);
-  font-size: 10px; font-weight: 600;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: var(--label); margin-bottom: 28px;
+.integration-header {
+  margin-bottom: 32px;
 }
-.integration-category {
-  margin-bottom: 16px;
+.heading-md {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--text);
 }
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.integration-category { }
 .integration-cat-label {
   font-family: var(--mono);
-  font-size: 10px; font-weight: 600;
+  font-size: 11px; font-weight: 600;
   letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--text-3); margin-bottom: 8px;
+  color: var(--label); margin-bottom: 10px;
 }
 .integration-pills {
   display: flex; flex-wrap: wrap; gap: 6px;
 }
 .integration-pill {
   font-family: var(--mono);
-  font-size: 11px; font-weight: 500;
+  font-size: 12px; font-weight: 500;
   color: var(--text-2);
   padding: 6px 14px;
   border: 1px solid var(--border);
   border-radius: 6px;
-  transition: all 0.15s;
+  transition: all 0.2s;
 }
 .integration-pill:hover {
   border-color: var(--text-3);
@@ -1167,6 +1175,7 @@ body {
   .arch-pipe-arrow { width: 24px; }
   .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .usecase-grid { grid-template-columns: 1fr; }
+  .integration-grid { grid-template-columns: 1fr; }
   .faq-panel { grid-template-columns: 1fr; }
   .faq-questions { border-radius: 28px 28px 0 0; }
   .faq-answer-panel { padding: 32px; }

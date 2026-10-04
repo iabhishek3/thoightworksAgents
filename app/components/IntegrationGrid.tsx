@@ -10,18 +10,23 @@ export default function IntegrationGrid() {
   ];
 
   return (
-    <div className="integration-grid">
-      <div className="integration-grid-label">Supported Integrations</div>
-      {categories.map((cat, i) => (
-        <div key={i} className="integration-category">
-          <div className="integration-cat-label">{cat.name}</div>
-          <div className="integration-pills">
-            {cat.tools.map((tool, j) => (
-              <span key={j} className="integration-pill">{tool}</span>
-            ))}
+    <div className="integration-section">
+      <div className="integration-header reveal">
+        <p className="eyebrow">Integrations</p>
+        <h3 className="heading-md">Connect your existing stack.</h3>
+      </div>
+      <div className="integration-grid">
+        {categories.map((cat, i) => (
+          <div key={i} className={`integration-category reveal reveal-d${i + 1}`}>
+            <div className="integration-cat-label">{cat.name}</div>
+            <div className="integration-pills">
+              {cat.tools.map((tool, j) => (
+                <span key={j} className="integration-pill">{tool}</span>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

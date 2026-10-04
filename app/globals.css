@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  /* Accent — Squadly purple */
-  --accent: #6C47FF;
-  --accent-hover: #5835db;
-  --accent-subtle: rgba(108,71,255,0.08);
+  /* Accent — deep burgundy */
+  --accent: #9B2335;
+  --accent-hover: #7d1c2a;
+  --accent-subtle: rgba(155,35,53,0.08);
   /* Status colors — used only in dark panels */
   --green: #16a34a;
   --blue: #2563eb;
@@ -871,7 +871,7 @@ body {
 .agent-card[data-domain="ops"] .agent-domain::before { background: #d97706; }
 .agent-card[data-domain="finance"] .agent-domain::before { background: #0891b2; }
 .agent-card[data-domain="customer"] .agent-domain::before { background: #2563eb; }
-.agent-card[data-domain="legal"] .agent-domain::before { background: #6C47FF; }
+.agent-card[data-domain="legal"] .agent-domain::before { background: #9B2335; }
 .agent-card[data-domain="growth"] .agent-domain::before { background: #059669; }
 .agent-name { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
 .agent-desc { font-size: 13px; color: var(--text-2); line-height: 1.65; }

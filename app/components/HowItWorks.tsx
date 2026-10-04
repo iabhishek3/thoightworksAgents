@@ -1,9 +1,9 @@
 export default function HowItWorks() {
   const steps = [
-    { n: "01", title: "Map your systems", desc: "We connect your CRM, data warehouse, ticketing, and communication tools through MCP servers and pre-built connectors. Auth, permissions, and data residency handled from day one." },
-    { n: "02", title: "Define agent objectives", desc: "Describe what each agent should accomplish in plain language. The platform decomposes goals into orchestration plans, tool selections, and guardrail boundaries — no prompt engineering required." },
-    { n: "03", title: "Launch with observability", desc: "Agents run inside isolated harnesses with full trace logging. Every LLM call, tool invocation, and decision point is auditable in the dashboard. Human-in-the-loop approvals where you need them." },
-    { n: "04", title: "Learn and expand", desc: "Agents improve from feedback loops and outcome data. Add new agents per function, extend to additional teams. Each agent costs compute, not headcount." },
+    { n: "01", title: "Map your systems", desc: "Connect your existing tools through pre-built connectors with auth and data residency handled from day one." },
+    { n: "02", title: "Define agent objectives", desc: "Describe goals in plain language — the platform handles orchestration, tool selection, and guardrails." },
+    { n: "03", title: "Launch with observability", desc: "Every decision and action is auditable in the dashboard, with human-in-the-loop approvals where you need them." },
+    { n: "04", title: "Learn and expand", desc: "Agents improve from feedback and outcomes — add new agents per function at compute cost, not headcount." },
   ];
 
   return (

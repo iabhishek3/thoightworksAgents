@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-glow" />
       <div className="hero-top">
-        <p className="hero-eyebrow">Super Intelligence</p>
+        <p className="hero-eyebrow">Agentic AI Platform</p>
         <h1>Squadly SI.</h1>
         <p className="hero-subtitle" data-type="Agents that think. Systems that act." aria-label="Agents that think. Systems that act.">
         </p>

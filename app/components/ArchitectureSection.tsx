@@ -1,14 +1,8 @@
 export default function ArchitectureSection() {
   const impactMetrics = [
-    { countTo: "50", suffix: "+", label: "Enterprise Integrations" },
     { display: "< 5 min", label: "Average Deployment" },
     { countTo: "99.9", suffix: "%", label: "Uptime SLA" },
     { display: "24/7", label: "Autonomous Operation" },
-  ];
-
-  const integrationTools = [
-    "Salesforce", "HubSpot", "Slack", "Teams", "Jira", "GitHub",
-    "Snowflake", "BigQuery", "PagerDuty", "Zendesk", "Notion", "AWS",
   ];
 
   const pipelineNodes = [
@@ -20,10 +14,10 @@ export default function ArchitectureSection() {
   ];
 
   const infraCards = [
-    { name: "Memory Layer", detail: "Short-term working memory and long-term recall across sessions. Context persists even when compute is recycled.", color: "var(--purple)" },
-    { name: "Tool Gateway", detail: "Secure connections to external systems via MCP servers, REST APIs, and pre-built connectors. Auth handled automatically.", color: "var(--amber)" },
-    { name: "Session Runtime", detail: "Isolated microVM per session with its own filesystem and shell. Agents can write and execute code safely.", color: "var(--green)" },
-    { name: "Guardrails", detail: "Input validation, output filtering, safety checks, and human-in-the-loop controls at every decision point.", color: "var(--blue)" },
+    { name: "Memory Layer", detail: "Short-term and long-term recall that persists across sessions.", color: "var(--purple)" },
+    { name: "Tool Gateway", detail: "Secure connections to external systems via MCP servers and REST APIs.", color: "var(--amber)" },
+    { name: "Session Runtime", detail: "Isolated microVM per session with its own filesystem and shell.", color: "var(--green)" },
+    { name: "Guardrails", detail: "Input validation, output filtering, and human-in-the-loop controls at every decision point.", color: "var(--blue)" },
   ];
 
   const traceLines = [
@@ -120,21 +114,6 @@ export default function ArchitectureSection() {
           ))}
         </div>
 
-        {/* Logo bar — inside arch chamber */}
-        <div className="arch-divider" />
-        <div className="arch-logo-bar">
-          <div className="logo-bar-label">Integrates with</div>
-          <div className="logo-grid">
-            <div className="logo-grid-track">
-              {integrationTools.map((tool, i) => (
-                <span key={i} className="logo-pill">{tool}</span>
-              ))}
-              {integrationTools.map((tool, i) => (
-                <span key={`dup-${i}`} className="logo-pill" aria-hidden="true">{tool}</span>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

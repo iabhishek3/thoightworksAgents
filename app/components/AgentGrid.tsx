@@ -1,13 +1,13 @@
 export default function AgentGrid() {
   const agents = [
-    { name: "Revenue Agent", domain: "Sales", key: "sales", desc: "Pipeline analysis, lead scoring, deal risk assessment, forecast generation." },
-    { name: "Research Agent", domain: "Intelligence", key: "intelligence", desc: "Market analysis, competitive monitoring, trend identification, report synthesis." },
-    { name: "Engineering Agent", domain: "Development", key: "development", desc: "Code review, test generation, incident triage, deployment automation." },
-    { name: "Operations Agent", domain: "Ops", key: "ops", desc: "Workflow orchestration, bottleneck detection, resource allocation." },
-    { name: "Finance Agent", domain: "Finance", key: "finance", desc: "P&L monitoring, expense categorization, cash flow forecasting, anomaly detection." },
-    { name: "Support Agent", domain: "Customer", key: "customer", desc: "Ticket classification, response drafting, escalation routing." },
-    { name: "Compliance Agent", domain: "Legal", key: "legal", desc: "Contract review, risk flagging, regulatory monitoring, policy enforcement." },
-    { name: "Marketing Agent", domain: "Growth", key: "growth", desc: "Campaign analysis, content optimization, audience segmentation." },
+    { name: "Revenue Agent", domain: "Sales", key: "sales", desc: "Pipeline analysis, lead scoring, and deal risk assessment." },
+    { name: "Research Agent", domain: "Intelligence", key: "intelligence", desc: "Competitive monitoring, trend identification, and report synthesis." },
+    { name: "Engineering Agent", domain: "Development", key: "development", desc: "Incident triage, code review, and deployment automation." },
+    { name: "Operations Agent", domain: "Ops", key: "ops", desc: "Workflow orchestration and bottleneck detection." },
+    { name: "Finance Agent", domain: "Finance", key: "finance", desc: "P&L monitoring, cash flow forecasting, and anomaly detection." },
+    { name: "Support Agent", domain: "Customer", key: "customer", desc: "Ticket classification, response drafting, and escalation routing." },
+    { name: "Compliance Agent", domain: "Legal", key: "legal", desc: "Contract review, risk flagging, and regulatory monitoring." },
+    { name: "Marketing Agent", domain: "Growth", key: "growth", desc: "Campaign analysis and audience segmentation." },
   ];
 
   return (

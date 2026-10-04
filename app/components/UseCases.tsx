@@ -3,7 +3,7 @@ export default function UseCases() {
     {
       eyebrow: "Revenue Operations",
       title: "Pipeline risk identified before quarterly review",
-      body: "Revenue Agent analyzed 142 open deals against historical close rates, flagged 3 at-risk opportunities worth $2.4M combined, and drafted recovery actions — all before the weekly pipeline call.",
+      body: "Revenue Agent analyzed 142 open deals, flagged 3 at-risk opportunities worth $2.4M, and drafted recovery actions before the pipeline call.",
       metric: "3 hrs → 12 min",
       metricLabel: "Time saved",
       borderColor: "#2563eb",
@@ -11,7 +11,7 @@ export default function UseCases() {
     {
       eyebrow: "Engineering",
       title: "Incident root cause found while on-call sleeps",
-      body: "At 2:47 AM, the Engineering Agent detected elevated error rates, correlated logs across 4 services, identified a misconfigured cache TTL deployed at 11 PM, and drafted a rollback PR. The on-call engineer woke up to a solved problem.",
+      body: "Engineering Agent detected elevated error rates at 2:47 AM, correlated logs across 4 services, and drafted a rollback PR before the on-call engineer woke up.",
       metric: "MTTR reduced 74%",
       metricLabel: "Resolution improvement",
       borderColor: "#16a34a",
@@ -19,7 +19,7 @@ export default function UseCases() {
     {
       eyebrow: "Market Intelligence",
       title: "Competitive landscape report generated weekly",
-      body: "Research Agent monitors 847 sources — SEC filings, patent databases, hiring posts, product changelogs — and synthesizes a weekly intelligence brief. What used to take an analyst 2 days now arrives every Monday at 8 AM.",
+      body: "Research Agent monitors 847 sources and synthesizes a weekly intelligence brief that used to take an analyst 2 days.",
       metric: "2 days → automated",
       metricLabel: "Fully automated",
       borderColor: "#7c3aed",

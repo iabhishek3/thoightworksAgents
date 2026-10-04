@@ -2,12 +2,11 @@ import IntegrationGrid from "./IntegrationGrid";
 
 export default function PlatformSection() {
   const cards = [
-    { label: "Multi-Agent Orchestration", body: "The platform coordinates specialist agents that share context, delegate sub-tasks, and converge on unified outcomes — much like a well-run team." },
-    { label: "Reasoning Engine", body: "Each agent decomposes objectives into sub-tasks, plans execution paths, and adapts when conditions change — genuine problem-solving, not scripts." },
-    { label: "Full Observability", body: "Audit trail of every decision and action. Human-in-the-loop controls when you need them. Nothing runs in a black box." },
-    { label: "50+ Integrations", body: "CRMs, data warehouses, issue trackers, communication tools. Connect your existing stack through secure, pre-built connectors." },
-    { label: "Enterprise Security", body: "SOC 2 Type II. End-to-end encryption. Role-based access. Data residency controls. Your data never leaves your boundaries." },
-    { label: "Continuous Learning", body: "Agents improve from feedback and outcomes over time — refining their approach without retraining or manual tuning." },
+    { label: "Multi-Agent Orchestration", body: "Specialist agents share context, delegate sub-tasks, and converge on unified outcomes." },
+    { label: "Reasoning Engine", body: "Agents decompose objectives, plan execution paths, and adapt when conditions change." },
+    { label: "Full Observability", body: "Audit trail of every decision and action, with human-in-the-loop controls built in." },
+    { label: "Enterprise Security", body: "SOC 2 Type II certified with end-to-end encryption and data residency controls." },
+    { label: "Continuous Learning", body: "Agents improve from feedback and outcomes over time without retraining." },
   ];
 
   return (

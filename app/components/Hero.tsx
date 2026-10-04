@@ -6,8 +6,8 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-glow" />
       <div className="hero-top">
-        <p className="hero-eyebrow">by ThoughtWorks</p>
-        <h1>Superintelligence.</h1>
+        <p className="hero-eyebrow">Super Intelligence</p>
+        <h1>Squadly SI.</h1>
         <p className="hero-subtitle" data-type="Agents that think. Systems that act." aria-label="Agents that think. Systems that act.">
         </p>
         <p className="hero-body">
@@ -15,7 +15,7 @@ export default function Hero() {
           with your systems, and execute — continuously, reliably, at scale.
         </p>
         <div className="hero-actions">
-          <a href="mailto:info@thoughtworks.ai?subject=Superintelligence%20—%20Access%20Request" className="btn-primary">
+          <a href="mailto:info@squadly.si?subject=Squadly%20SI%20—%20Access%20Request" className="btn-primary">
             Request early access
             <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
           </a>

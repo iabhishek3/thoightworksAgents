@@ -22,19 +22,14 @@ const ebGaramond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Superintelligence by ThoughtWorks — Autonomous AI Agents",
+  title: "Squadly SI — Autonomous AI Agents",
   description:
-    "Superintelligence by ThoughtWorks — autonomous AI agents that reason, plan, and execute across your enterprise. Agentic AI with multi-agent orchestration, 50+ integrations, SOC 2 certified.",
+    "Squadly SI (Super Intelligence) — autonomous AI agents that reason, plan, and execute across your enterprise. Agentic AI with multi-agent orchestration, 50+ integrations, SOC 2 certified.",
   keywords: [
-    "Superintelligence",
-    "Superintelligence AI",
-    "Superintelligence platform",
-    "Superintelligence by ThoughtWorks",
-    "ThoughtWorks AI",
-    "ThoughtWorks AI agents",
-    "super intelligent AI agents",
-    "super intelligence AI platform",
-    "superintelligent AI",
+    "Squadly SI",
+    "Squadly Super Intelligence",
+    "Squadly AI",
+    "Squadly AI agents",
     "AI agent platform",
     "enterprise AI agents",
     "autonomous AI agents",
@@ -51,20 +46,20 @@ export const metadata: Metadata = {
     "superintelligence platform",
   ],
   alternates: {
-    canonical: "https://agents.thoughtworks.com/",
+    canonical: "https://squadly.si/",
   },
   openGraph: {
-    title: "Superintelligence by ThoughtWorks — Autonomous AI Agents",
+    title: "Squadly SI — Autonomous AI Agents",
     description:
-      "Superintelligence — autonomous AI agents for enterprise operations. Multi-agent orchestration, full observability, and enterprise-grade security by ThoughtWorks.",
-    url: "https://agents.thoughtworks.com/",
-    siteName: "Superintelligence",
+      "Squadly SI — autonomous AI agents for enterprise operations. Multi-agent orchestration, full observability, and enterprise-grade security.",
+    url: "https://squadly.si/",
+    siteName: "Squadly SI",
     images: [
       {
-        url: "https://agents.thoughtworks.com/og-image.png",
+        url: "https://squadly.si/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Superintelligence dashboard showing autonomous agents executing enterprise workflows",
+        alt: "Squadly SI dashboard showing autonomous agents executing enterprise workflows",
       },
     ],
     locale: "en_US",
@@ -72,12 +67,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Superintelligence by ThoughtWorks — Autonomous AI Agents",
+    title: "Squadly SI — Autonomous AI Agents",
     description:
-      "Superintelligence — autonomous AI agents that reason, plan, and execute across your enterprise. By ThoughtWorks.",
-    images: ["https://agents.thoughtworks.com/og-image.png"],
-    creator: "@thoughtworks",
-    site: "@thoughtworks",
+      "Squadly SI — autonomous AI agents that reason, plan, and execute across your enterprise.",
+    images: ["https://squadly.si/og-image.png"],
   },
   robots: {
     index: true,
@@ -105,22 +98,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "ThoughtWorks",
-              legalName: "ThoughtWorks, Inc.",
-              url: "https://agents.thoughtworks.com",
-              logo: "https://agents.thoughtworks.com/icon.svg",
+              name: "Squadly",
+              legalName: "Squadly, Inc.",
+              url: "https://squadly.si",
+              logo: "https://squadly.si/icon.svg",
               description:
-                "ThoughtWorks builds Superintelligence — enabling autonomous AI agents, multi-agent orchestration, agentic AI, and superintelligent workflow automation at enterprise scale.",
+                "Squadly builds SI (Super Intelligence) — enabling autonomous AI agents, multi-agent orchestration, agentic AI, and superintelligent workflow automation at enterprise scale.",
               contactPoint: {
                 "@type": "ContactPoint",
-                email: "info@thoughtworks.ai",
+                email: "info@squadly.si",
                 contactType: "sales",
               },
-              sameAs: [
-                "https://www.linkedin.com/company/thoughtworks",
-                "https://twitter.com/thoughtworks",
-                "https://github.com/thoughtworks",
-              ],
             }),
           }}
         />
@@ -130,13 +118,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "Superintelligence",
+              name: "Squadly SI",
               applicationCategory: "BusinessApplication",
               applicationSubCategory: "Agentic AI Platform",
               operatingSystem: "Web",
-              url: "https://agents.thoughtworks.com",
+              url: "https://squadly.si",
               description:
-                "Superintelligence by ThoughtWorks — deploy autonomous AI agents that reason, plan, and execute multi-step enterprise workflows with full observability and SOC 2 Type II security.",
+                "Squadly SI — deploy autonomous AI agents that reason, plan, and execute multi-step enterprise workflows with full observability and SOC 2 Type II security.",
               featureList: [
                 "Multi-Agent Orchestration",
                 "AI Workflow Automation",
@@ -154,7 +142,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               },
               provider: {
                 "@type": "Organization",
-                name: "ThoughtWorks",
+                name: "Squadly",
               },
             }),
           }}
@@ -165,9 +153,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Superintelligence",
-              alternateName: ["Superintelligence AI", "Superintelligence by ThoughtWorks", "ThoughtWorks AI Agents"],
-              url: "https://agents.thoughtworks.com",
+              name: "Squadly SI",
+              alternateName: ["Squadly Super Intelligence", "Squadly AI"],
+              url: "https://squadly.si",
             }),
           }}
         />

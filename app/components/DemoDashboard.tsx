@@ -18,7 +18,7 @@ export default function DemoDashboard() {
   ];
 
   return (
-    <div className="demo-wrap" role="img" aria-label="Animated demo of Superintelligence showing agents analyzing a pipeline and generating a risk report">
+    <div className="demo-wrap" role="img" aria-label="Animated demo of Squadly SI showing agents analyzing a pipeline and generating a risk report">
       <div className="demo">
         {/* Title bar */}
         <div className="demo-titlebar">
@@ -27,7 +27,7 @@ export default function DemoDashboard() {
             <span className="demo-dot demo-dot-y" />
             <span className="demo-dot demo-dot-g" />
           </div>
-          <span className="demo-title">Superintelligence</span>
+          <span className="demo-title">Squadly SI</span>
           <div className="demo-live">
             <span className="demo-live-dot" />
             Live

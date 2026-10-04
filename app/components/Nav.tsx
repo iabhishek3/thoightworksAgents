@@ -5,12 +5,12 @@ export default function Nav() {
       <nav className="nav" aria-label="Main navigation">
         <div className="nav-progress" />
         <div className="nav-inner">
-          <a href="#" className="nav-logo" aria-label="Superintelligence homepage">
+          <a href="#" className="nav-logo" aria-label="Squadly homepage">
             <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <rect width="32" height="32" rx="7" fill="#9B2335" />
-              <path d="M7 10h6v2h-2v8h-2v-8H7v-2zm8 0h5l3 10h-2.5L18.8 14 17 20h-2.5l.5-10z" fill="white" />
+              <rect width="32" height="32" rx="7" fill="#6C47FF" />
+              <path d="M8 10h5c2 0 3 1 3 2.5S14 15 12 15h-2v5H8V10zm2 4h2c.8 0 1.5-.4 1.5-1.5S12.8 11 12 11h-2v3zm7-4h2v10h-2V10z" fill="white" />
             </svg>
-            <span>Superintelligence <span className="nav-logo-sub">by ThoughtWorks</span></span>
+            <span>Squadly <span className="nav-logo-sub">SI</span></span>
           </a>
           <ul className="nav-links">
             <li><a href="#architecture">Architecture</a></li>
@@ -18,7 +18,7 @@ export default function Nav() {
             <li><a href="#agents">Agents</a></li>
             <li><a href="#how">How It Works</a></li>
           </ul>
-          <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-nav">Request Access</a>
+          <a href="mailto:info@squadly.si?subject=Squadly%20SI%20—%20Access%20Request" className="btn-nav">Request Access</a>
           <label htmlFor="nav-toggle" className="nav-hamburger" aria-label="Toggle menu">
             <span /><span /><span />
           </label>
@@ -30,7 +30,7 @@ export default function Nav() {
         <label htmlFor="nav-toggle"><a href="#platform">Platform</a></label>
         <label htmlFor="nav-toggle"><a href="#agents">Agents</a></label>
         <label htmlFor="nav-toggle"><a href="#how">How It Works</a></label>
-        <a href="mailto:info@thoughtworks.ai?subject=Agent%20Platform%20—%20Access%20Request" className="btn-nav">Request Access</a>
+        <a href="mailto:info@squadly.si?subject=Squadly%20SI%20—%20Access%20Request" className="btn-nav">Request Access</a>
       </div>
     </>
   );

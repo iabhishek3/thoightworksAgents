@@ -41,7 +41,8 @@ export default function UseCases() {
           </p>
         </div>
 
-        <div className="usecase-grid">
+      </div>
+        <div className="usecase-track">
           {useCases.map((useCase, index) => (
             <div
               key={index}
@@ -58,7 +59,6 @@ export default function UseCases() {
             </div>
           ))}
         </div>
-      </div>
     </section>
   );
 }

@@ -83,9 +83,60 @@ export default function ScrollAnimations() {
       }, 40);
     }
 
+    // P1, P2, P4: Scroll-driven effects
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const nav = document.querySelector('.nav') as HTMLElement | null;
+    const progressBar = document.querySelector('.nav-progress') as HTMLElement | null;
+    const demoWrap = document.querySelector('.demo-wrap') as HTMLElement | null;
+    const heroEl = document.querySelector('.hero') as HTMLElement | null;
+
+    function onScrollUpdate() {
+      // P1: Nav scroll response
+      if (nav) {
+        if (window.scrollY > 200) {
+          nav.classList.add('nav-solid');
+        } else {
+          nav.classList.remove('nav-solid');
+        }
+      }
+
+      // P4: Scroll progress bar
+      if (progressBar) {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? Math.min(window.scrollY / docHeight, 1) : 0;
+        progressBar.style.transform = `scaleX(${progress})`;
+      }
+
+      // P2: Hero demo parallax
+      if (demoWrap && heroEl) {
+        const heroBottom = heroEl.offsetTop + heroEl.offsetHeight;
+        const triggerStart = heroBottom - window.innerHeight;
+        const scrollY = window.scrollY;
+        if (scrollY > triggerStart && scrollY < heroBottom) {
+          const progress = (scrollY - triggerStart) / (heroBottom - triggerStart);
+          const scale = 1 - (progress * 0.05);
+          const opacity = 1 - (progress * 0.4);
+          demoWrap.style.transform = `scale(${scale})`;
+          demoWrap.style.opacity = String(opacity);
+        } else if (scrollY <= triggerStart) {
+          demoWrap.style.transform = 'scale(1)';
+          demoWrap.style.opacity = '1';
+        }
+      }
+    }
+
+    if (!prefersReducedMotion) {
+      window.addEventListener('scroll', onScrollUpdate, { passive: true });
+      onScrollUpdate();
+    } else {
+      // Reduced motion: nav always solid
+      if (nav) nav.classList.add('nav-solid');
+    }
+
     return () => {
       revealObserver.disconnect();
       countObserver.disconnect();
+      window.removeEventListener('scroll', onScrollUpdate);
     };
   }, []);
 

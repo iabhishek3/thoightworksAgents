@@ -60,10 +60,29 @@ body {
   z-index: 100;
   width: calc(100% - 48px); max-width: 960px;
   height: 52px; display: flex; align-items: center;
-  background: var(--bg);
-  border: 2px solid var(--text);
+  background: rgba(248, 246, 241, 0.5);
+  border: 2px solid transparent;
   border-radius: 9999px;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
+.nav-solid {
+  background: var(--bg);
+  border-color: var(--text);
+}
+.nav-progress {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+}
+.nav:not(.nav-solid) .nav-progress { opacity: 0; }
+.nav-solid .nav-progress { opacity: 1; transition: opacity 0.3s; }
 .nav-inner {
   width: 100%; max-width: none;
   margin: 0; padding: 0 8px 0 20px;
@@ -158,11 +177,11 @@ body {
   z-index: 98; cursor: pointer;
   background: rgba(0,0,0,0.15);
 }
-.nav-toggle:checked ~ .nav-inner .nav-hamburger span:nth-child(1) {
+.nav-toggle:checked ~ .nav .nav-hamburger span:nth-child(1) {
   transform: rotate(45deg) translate(2px, 2px);
 }
-.nav-toggle:checked ~ .nav-inner .nav-hamburger span:nth-child(2) { opacity: 0; }
-.nav-toggle:checked ~ .nav-inner .nav-hamburger span:nth-child(3) {
+.nav-toggle:checked ~ .nav .nav-hamburger span:nth-child(2) { opacity: 0; }
+.nav-toggle:checked ~ .nav .nav-hamburger span:nth-child(3) {
   transform: rotate(-45deg) translate(2px, -2px);
 }
 
@@ -235,6 +254,8 @@ body {
 .demo-wrap {
   max-width: 1140px; margin: 0 auto;
   padding-bottom: 0;
+  will-change: transform, opacity;
+  transform-origin: center top;
 }
 .demo {
   background: var(--forest);
@@ -947,11 +968,15 @@ body {
    ================================================================ */
 .usecase-section {
   background: var(--bg-warm);
-  padding: 100px 32px;
+  padding: 100px 0;
 }
-.usecase-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.usecase-section .section-inner {
+  padding: 0 32px;
+}
+.usecase-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 .usecase-card {
   padding: 32px;
@@ -1174,7 +1199,7 @@ body {
   .arch-pipe-nodes { flex-wrap: wrap; gap: 8px; justify-content: center; }
   .arch-pipe-arrow { width: 24px; }
   .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-  .usecase-grid { grid-template-columns: 1fr; }
+  .usecase-track { grid-template-columns: 1fr; }
   .integration-grid { grid-template-columns: 1fr; }
   .faq-panel { grid-template-columns: 1fr; }
   .faq-questions { border-radius: 28px 28px 0 0; }
@@ -1403,4 +1428,10 @@ body {
   .cta-section { animation: none; }
   .arch-section::before,
   .arch-section::after { animation: none; opacity: 0; }
+  /* P1: Nav always solid */
+  .nav { background: var(--bg) !important; border-color: var(--text) !important; transition: none !important; }
+  /* P2: No hero parallax */
+  .demo-wrap { transform: none !important; opacity: 1 !important; }
+  /* P4: No progress bar */
+  .nav-progress { display: none; }
 }

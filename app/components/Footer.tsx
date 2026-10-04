@@ -11,7 +11,7 @@ export default function Footer() {
         </a>
         <div className="footer-copy">&copy; 2026 Squadly, Inc. All rights reserved.</div>
         <div className="footer-links">
-          <a href="mailto:info@squadly.si">Contact</a>
+          <a href="mailto:team@squadly.si">Contact</a>
           <a href="https://squadly.si/privacy">Privacy</a>
           <a href="https://squadly.si/terms">Terms</a>
         </div>

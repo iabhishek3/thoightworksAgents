@@ -106,7 +106,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 "Squadly builds SI (Super Intelligence) — enabling autonomous AI agents, multi-agent orchestration, agentic AI, and superintelligent workflow automation at enterprise scale.",
               contactPoint: {
                 "@type": "ContactPoint",
-                email: "info@squadly.si",
+                email: "team@squadly.si",
                 contactType: "sales",
               },
             }),

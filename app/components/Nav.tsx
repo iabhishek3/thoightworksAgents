@@ -18,7 +18,7 @@ export default function Nav() {
             <li><a href="#agents">Agents</a></li>
             <li><a href="#how">How It Works</a></li>
           </ul>
-          <a href="mailto:info@squadly.si?subject=Squadly%20SI%20—%20Access%20Request" className="btn-nav">Request Access</a>
+          <a href="mailto:team@squadly.si?subject=Squadly%20SI%20—%20Access%20Request" className="btn-nav">Request Access</a>
           <label htmlFor="nav-toggle" className="nav-hamburger" aria-label="Toggle menu">
             <span /><span /><span />
           </label>
@@ -30,7 +30,7 @@ export default function Nav() {
         <label htmlFor="nav-toggle"><a href="#platform">Platform</a></label>
         <label htmlFor="nav-toggle"><a href="#agents">Agents</a></label>
         <label htmlFor="nav-toggle"><a href="#how">How It Works</a></label>
-        <a href="mailto:info@squadly.si?subject=Squadly%20SI%20—%20Access%20Request" className="btn-nav">Request Access</a>
+        <a href="mailto:team@squadly.si?subject=Squadly%20SI%20—%20Access%20Request" className="btn-nav">Request Access</a>
       </div>
     </>
   );
